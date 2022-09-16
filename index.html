@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <template id="sample">
+      <li>
+        <div class="movieCard">
+          <div class="Poster moviepic"></div>
+          <div>
+            <img class="Star" />
+            <span id="rating"></span>
+          </div>
+          <div id="link"></div>
+          <span class="genre"></span>
+          <button id="Watch"><a href="">Watch now!</a></button>
+        </div>
+      </li>
+    </template>
+    <div class="main">
+      <div id="toolBar">
+        <h1><a href="/index.html">NewFlix</a></h1>
+        <img class="logo" src="images/logo.png"> 
+        <ul>
+          <div class="GenreList">
+            <a href="/movelistByGenre/action/action.html">action</a>
+            <a href="/movelistByGenre/horror/horror.html">horror</a>
+            <a href="/movelistByGenre/thriller/thriller.html">thriller</a>
+          </div>
+          <li><button id="GenreShow">Genres</button><img src="images/icon-arrow-light.svg"></li>
+          <li><a href="About.html">Who are we</a></li>
+        </ul>
+      </div>
+      <div class="Search">
+        <label for="SearchBar">Search for your Movie</label>
+        <div class="searchWrapper">
+        <input type="text" id="SearchBar" placeholder="search here" />
+        <div class="Icon"><img src="images/search.png"></div>
+      </div>
+      <ul class="movies"></ul>
+    </div>
+  </body>
+</html>
