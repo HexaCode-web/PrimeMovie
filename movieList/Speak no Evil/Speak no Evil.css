@@ -128,6 +128,14 @@ body::-webkit-scrollbar,
   color: cyan;
   transition: 0.5s;
 }
+#MoreInfo a {
+  text-decoration: none;
+  color: goldenrod;
+}
+#MoreInfo a:hover {
+  color: cyan;
+  transition: 0.5s;
+}
 .button-wrapper {
   position: absolute;
   width: 40%;

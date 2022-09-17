@@ -41,7 +41,22 @@ const DefineMovie = (Data, img) => {
   console.log(Data);
   const printgenre = () => {
     Data.genres.forEach((element) => {
-      Genreinfo.innerHTML += `${element.name}, `;
+      if (element.name === "Thriller") {
+        Genreinfo.innerHTML += `<a href="../../movelistByGenre/thriller/thriller.html">${element.name} </a> `;
+      }
+      if (element.name === "Horror") {
+        Genreinfo.innerHTML += `<a href="../../movelistByGenre/horror/horror.html">${element.name} </a> `;
+      }
+      if (element.name === "Action") {
+        Genreinfo.innerHTML += `<a href="../../movelistByGenre/action/action.html">${element.name} </a> `;
+      }
+      if (
+        element.name !== "Thriller" &&
+        element.name !== "Action" &&
+        element.name !== "Horror"
+      ) {
+        Genreinfo.innerHTML += `${element.name}  `;
+      }
     });
   };
   const printCount = () => {
@@ -50,15 +65,15 @@ const DefineMovie = (Data, img) => {
     });
   };
   poster.src = img;
-  MovieLANG.innerHTML = `language: ${Data.original_language}`;
-  MovieDuration.innerHTML = `Duration:${Data.runtime} min`;
+  MovieLANG.innerHTML = `<span>Languages:</span>  ${Data.original_language}`;
+  MovieDuration.innerHTML = `<span>Duration:</span> ${Data.runtime} min`;
   About.innerHTML =
     "A recently widowed man and his two teenage daughters travel to a game reserve in South Africa. However, their journey of healing soon turns into a fight for survival when a bloodthirsty lion starts to stalk";
-  countries.innerHTML = `countries: `;
+  countries.innerHTML = `<span>countries:</span> `;
   printCount();
-  Genreinfo.innerHTML = `genre: `;
+  Genreinfo.innerHTML = `<span>Genres:</span>  `;
   printgenre();
-  releseDate.innerHTML = `release date:${Data.release_date}`;
+  releseDate.innerHTML = `<span>release date:</span> ${Data.release_date}`;
   MovieTitle.innerHTML = `<h1>${Data.title}</h1>`;
 };
 addMovieinfo(

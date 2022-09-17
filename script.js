@@ -100,24 +100,24 @@ addMovie(
 addMovie(
   `https://iegybest.cloud/wp-content/uploads/2022/09/Kingslayer.jpg`,
   991247,
-  "/movieList/Kingslayer/Kingslayer.html",
+  "movieList/Kingslayer/Kingslayer.html",
   "action"
 );
 addMovie(
   `https://m.media-amazon.com/images/M/MV5BMTNkNjU4OGYtODM3NS00NzM1LWFkZWItZTExNzdjYTAwMmRlXkEyXkFqcGdeQXVyMTE1MzI2NzIz._V1_FMjpg_UX1000_.jpg`,
   807356,
-  "/movieList/Watcher/Watcher.html",
+  "movieList/Watcher/Watcher.html",
   "horror"
 );
 addMovie(
   `https://iegybest.cloud/wp-content/uploads/2022/09/York-Witches-Society.jpg`,
   1007205,
-  "/movieList/York Witches Society/York Witches Society.html",
+  "movieList/York Witches Society/York Witches Society.html",
   "horror"
 );
 addMovie(
   `https://m.media-amazon.com/images/M/MV5BNWRhMjcwYjMtZDg2ZC00YmI1LWIwM2MtOTBhNmQ4OWUwYjgxXkEyXkFqcGdeQXVyNDgyNzAxMzY@._V1_.jpg`,
   833339,
-  "/movieList/Speak no Evil/Speak no Evil.html",
+  "movieList/Speak no Evil/Speak no Evil.html",
   "horror"
 );

@@ -41,7 +41,22 @@ const DefineMovie = (Data, img) => {
   console.log(Data);
   const printgenre = () => {
     Data.genres.forEach((element) => {
-      Genreinfo.innerHTML += `${element.name}, `;
+      if (element.name === "Thriller") {
+        Genreinfo.innerHTML += `<a href="../../movelistByGenre/thriller/thriller.html">${element.name} </a> `;
+      }
+      if (element.name === "Horror") {
+        Genreinfo.innerHTML += `<a href="../../movelistByGenre/horror/horror.html">${element.name} </a> `;
+      }
+      if (element.name === "Action") {
+        Genreinfo.innerHTML += `<a href="../../movelistByGenre/action/action.html">${element.name} </a> `;
+      }
+      if (
+        element.name !== "Thriller" &&
+        element.name !== "Action" &&
+        element.name !== "Horror"
+      ) {
+        Genreinfo.innerHTML += `${element.name}  `;
+      }
     });
   };
   const printCount = () => {
