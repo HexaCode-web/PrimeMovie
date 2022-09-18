@@ -50,10 +50,14 @@ const DefineMovie = (Data, img) => {
       if (element.name === "Action") {
         Genreinfo.innerHTML += `<a href="../../movelistByGenre/action/action.html">${element.name} </a> `;
       }
+      if (element.name === "Animation") {
+        Genreinfo.innerHTML += `<a href="../../movelistByGenre/Animation/Animation.html">${element.name} </a> `;
+      }
       if (
         element.name !== "Thriller" &&
         element.name !== "Action" &&
-        element.name !== "Horror"
+        element.name !== "Horror" &&
+        element.name !== "Animation"
       ) {
         Genreinfo.innerHTML += `${element.name}  `;
       }
@@ -65,14 +69,14 @@ const DefineMovie = (Data, img) => {
     });
   };
   poster.src = img;
-  MovieLANG.innerHTML = `language: ${Data.original_language}`;
-  MovieDuration.innerHTML = `Duration:${Data.runtime} min`;
-  About.innerHTML = Data.overview;
-  countries.innerHTML = `countries: `;
+  MovieLANG.innerHTML = `<span>Languages:</span>  ${Data.original_language}`;
+  MovieDuration.innerHTML = `<span>Duration:</span> ${Data.runtime} min`;
+  About.innerHTML = `Overview: ${Data.overview}`;
+  countries.innerHTML = `<span>countries:</span> `;
   printCount();
-  Genreinfo.innerHTML = `genre: `;
+  Genreinfo.innerHTML = `<span>Genres:</span>  `;
   printgenre();
-  releseDate.innerHTML = `release date:${Data.release_date}`;
+  releseDate.innerHTML = `<span>release date:</span> ${Data.release_date}`;
   MovieTitle.innerHTML = `<h1>${Data.title}</h1>`;
 };
 
