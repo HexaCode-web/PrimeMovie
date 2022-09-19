@@ -34,11 +34,11 @@ html {
           video
 ============================================== */
 iframe {
-  top: 1000px;
+  top: 950px;
   position: absolute;
   margin: 20px;
   min-height: 712px;
-  width: 100%;
+  width: 95%;
   display: none;
   animation: slidefromtop 1s ease-out both;
 }

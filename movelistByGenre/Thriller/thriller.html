@@ -37,27 +37,38 @@
     <div class="main">
       <div id="toolBar">
         <h1><a href="../../index.html">NewFlix</a></h1>
-        <img class="logo" src="../../images/logo.png"> 
+        <img class="logo" src="../../images/logo.png" />
+      </div>
+      <div class="filters">
         <ul>
           <div class="GenreList inactive">
             <a href="../action/action.html">action</a>
             <a href="../horror/horror.html">horror</a>
+            <a href="../thriller/thriller.html">thriller</a>
             <a href="../Animation/Animation.html">Animation</a>
             <a href="../Drama/Drama.html">Drama</a>
             <a href="../Comedy/Comedy.html">Comedy</a>
           </div>
-          <li><button id="GenreShow">Genres</button><img src="../../images/icon-arrow-light.svg"></li>
-          <li><a href="../../About.html">Who are we</a></li>
-          <li><button id="HighRate">High Rating Movies</button></li>
-          <li><button id="New">New Movies</button></li>
+          <li><a href="About.html">Who are we</a></li>
+          <li>
+            <button id="GenreShow">Genres</button
+            ><img src="../../images/icon-arrow-light.svg" />
+          </li>
+          <li><button id="HighRate">High Rating</button></li>
+          <li><button id="New">New</button></li>
           <li><button id="Year">Choose by year</button></li>
-          <div class="yearList inactive"><ul class="List"></ul> </div>
+          <li><button id="series">series</button></li>
+          <li><button id="movies">movies</button></li>
+          <div class="yearList inactive"><ul class="List"></ul></div>
         </ul>
       </div>
       <div class="Search">
         <label for="SearchBar">Search for your Movie</label>
         <div class="searchWrapper">
-        <input type="text" id="SearchBar" placeholder="search here" />
+          <input type="text" id="SearchBar" placeholder="search here" />
+          <div class="Icon"><img src="../../images/search.png" /></div>
+        </div>
+        <ul class="movies"></ul>
       </div>
       <ul class="movies"></ul>
     </div>

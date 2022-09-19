@@ -34,10 +34,10 @@ html {
           video
 ============================================== */
 iframe {
-  top: 950px;
+  top: 1400px;
   position: absolute;
   margin: 20px;
-  min-height: 712px;
+  height: 600px;
   width: 95%;
   display: none;
   animation: slidefromtop 1s ease-out both;
@@ -63,10 +63,10 @@ iframe {
   z-index: 0;
   display: flex;
   position: absolute;
-  width: 100%;
-  height: 740px;
+  width: 95%;
+  height: 125%;
   opacity: 0.1;
-  background-image: url(https://www.themoviedb.org/t/p/w600_and_h900_bestv2/r15SUgzjL8bablcdEkHk9T7TSRl.jpg);
+  background-image: url(https://image.tmdb.org/t/p/w500/2TNvXmcwQOv7Dhe9p5m7f1ngc1g.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -154,72 +154,59 @@ span {
   height: 50px;
   width: 60%;
 }
-.Watch:hover {
+.Watch:hover,
+.buttons button:hover {
   transition: all 0.1s;
   scale: 1.1;
 }
-.Watch:active {
+.Watch:active,
+.buttons button:active {
   transition: all 0.1s;
   scale: 0.9;
 }
-/* ================================================
-          Others RECOOmndations
-============================================== */
-.movies .movieCard .Star {
-  content: url(../../images/star.png);
-  width: 10px;
-}
-.Other {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  color: goldenrod;
-}
-.movies {
-  gap: 20px;
-  padding: 10px;
+.buttons {
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  border: 1px solid cyan;
+  gap: 10px;
 }
-.movies .movieCard {
-  color: goldenrod;
-  padding: 2px;
-  width: 200px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.moviepic img {
-  border-radius: 15px;
-  width: 200px;
-  height: 200px;
-}
-.movies button {
-  margin-top: 10px;
-  margin-bottom: 0;
-  color: goldenrod;
-  border-radius: 10px;
-  border: none;
-  background-color: rgba(86, 95, 119);
-  width: 90%;
-  height: 40px;
-}
-.movies a {
-  margin-bottom: 0px;
-  font-size: 1.3rem;
-  text-decoration: none;
-  color: goldenrod;
-}
-.movies a:hover {
-  color: cyan;
-  scale: 1.3;
-  transition: all 0.1s;
-}
-ul {
+.buttons li {
   list-style: none;
+}
+.buttons button {
+  min-width: 110px;
+  height: 50px;
+  font-size: 1.3rem;
+  border-radius: 50px;
+  border: none;
+  font-family: Ubuntu;
+  background-color: rgba(86, 95, 119);
+  color: goldenrod;
+}
+.Season {
+  display: none;
+}
+.epLIST {
+  display: none;
+  max-width: 900px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.animations {
+  display: flex;
+  animation: slidefromtop 1s ease-out both;
+}
+.info {
+  display: none;
+  border-radius: 50px;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background-color: rgba(86, 95, 119);
+  color: goldenrod;
+  width: 450px;
+  height: 75px;
+  animation: slidefromtop 1s ease-out both;
 }
 @media (max-width: 500px) {
   html {

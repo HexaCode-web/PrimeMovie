@@ -6,6 +6,7 @@ html,
   width: 100%;
   height: 100%;
   background-color: #1e2129;
+  user-select: none;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -52,6 +53,7 @@ body::-webkit-scrollbar {
   gap: 20px;
 }
 #toolBar {
+  height: 100%;
   width: 95%;
   display: flex;
   color: goldenrod;
@@ -61,8 +63,8 @@ body::-webkit-scrollbar {
 #toolBar .logo {
   margin-left: 120px;
 }
-#toolBar .GenreList {
-  transform: translatex(-150px);
+.GenreList {
+  transform: translate(-250px, 110px);
   width: 100px;
   height: 150px;
   border-radius: 15px;
@@ -72,8 +74,9 @@ body::-webkit-scrollbar {
   flex-direction: column;
   animation: genreSlider 0.5s ease both;
 }
-#toolBar .yearList {
-  transform: translate(-550px, 200px);
+.yearList {
+  z-index: 1;
+  transform: translate(0, 100px);
   width: 400px;
   height: 200px;
   border-radius: 15px;
@@ -82,7 +85,7 @@ body::-webkit-scrollbar {
   flex-direction: column;
   animation: YearSlider 0.5s ease-out both;
 }
-#toolBar .yearList ul {
+.yearList ul {
   padding-top: 20px;
   padding-left: 0;
   justify-content: center;
@@ -93,7 +96,7 @@ body::-webkit-scrollbar {
   display: flex;
   gap: 0;
 }
-#toolBar .yearList li {
+.yearList li {
   width: 70px;
   height: 50px;
   animation: AppearLate 0.02s 0.45s ease both;
@@ -120,7 +123,7 @@ body::-webkit-scrollbar {
     height: 150px;
   }
 }
-#toolBar .GenreList a {
+.GenreList a {
   font-family: "Ubuntu";
   animation: AppearLate 0.02s 0.45s ease both;
 }
@@ -132,7 +135,7 @@ body::-webkit-scrollbar {
     opacity: 1;
   }
 }
-#toolBar .GenreList a:hover {
+.GenreList a:hover {
   width: fit-content;
   border-bottom: 1px solid white;
   transform: scale(1.2);
@@ -141,27 +144,26 @@ body::-webkit-scrollbar {
 #toolBar h1 {
   font-size: 3rem;
 }
-#toolBar ul {
+.filters ul {
   font-family: "Ubuntu";
   font-size: 1.5rem;
   gap: 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   list-style: none;
 }
-#toolBar ul li:hover {
+.filters ul li:hover {
   border-bottom: 1px solid white;
 }
-#toolBar button {
+button {
   cursor: pointer;
   font-size: 1.5rem;
   border: none;
   color: goldenrod;
   background-color: transparent;
 }
-#toolBar a {
+a {
   text-decoration: none;
   color: goldenrod;
 }
@@ -212,8 +214,8 @@ body::-webkit-scrollbar {
   display: flex;
   flex-wrap: wrap;
   width: 90%;
+  height: fit-content;
   border: 1px solid cyan;
-  border-bottom: none;
 }
 .movies .movieCard {
   color: goldenrod;
@@ -236,11 +238,13 @@ body::-webkit-scrollbar {
   }
 }
 .movies .movieCard:hover {
+  margin: 20px;
   border: 1.5px solid cyan;
-  transition: 0.2s;
-  transform: scale(1.05);
+  transition: 0.5s;
   border-radius: 15px;
-  box-shadow: 0 0 140px 90px goldenrod;
+  border-bottom: none;
+  box-shadow: 0 0 140px 20px goldenrod;
+  transition-timing-function: ease-out;
 }
 .movies .movieCard .Star {
   content: url(images/star.png);

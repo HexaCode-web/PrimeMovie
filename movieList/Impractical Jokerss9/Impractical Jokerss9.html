@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>boiling Point</title>
+    <title>Impractical Jokerss9</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,9 +19,9 @@
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="boiling Point.css"
+      href="Impractical Jokerss9.css"
     />
-    <script src="boiling Point.js" defer></script>
+    <script src="Impractical Jokerss9.js" defer></script>
   </head>
   <body>
     <main class="main">
@@ -31,14 +31,14 @@
       <div class="Info">
         <div class="background"></div>
         <div class="content">
-          <div>
+          <div class="Left">
             <img id="poster" />
             <div class="button-wrapper">
               <button class="Watch" id="WatchAR">Watch In Arabic</button>
               <button class="Watch" id="WatchEN">Watch In English!</button>
             </div>
           </div>
-          <div>
+          <div class="Right">
             <div id="title"><h1></h1></div>
             <div id="MovieInfo"></div>
             <div id="MoreInfo">
@@ -51,44 +51,19 @@
           </div>
         </div>
       </div>
+      <ul class="buttons Season"></ul>
+      <ul class="buttons epLIST"></ul>
       <iframe
         sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"
         class="MovieAR"
-        src="https://m.reviewtech.me/embed-z4zze4p8k1uo.html"
+        src="#"
         frameborder="0"
         scrolling="NO"
         width="1000"
         height="712"
         allowfullscreen=""
       ></iframe>
-      <iframe
-        sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"
-        class="MovieEN"
-        src="https://123movieshd.stream/m_applet.php?q=mv&id=25971&server=1"
-        frameborder="0"
-        height="700"
-        width="1000"
-        scrolling="NO"
-        allowfullscreen=""
-      ></iframe>
-      <div class="Other">
-        <ul class="movies">
-          <template id="sample">
-            <li>
-              <div class="movieCard">
-                <div class="Poster moviepic"></div>
-                <div>
-                  <img class="Star" />
-                  <span id="rating"></span>
-                </div>
-                <span class="genre"></span>
-                <div id="link"></div>
-                <button id="Watch">Watch now!</button>
-              </div>
-            </li>
-          </template>
-        </ul>
-      </div>
+      <div class="info"></div>
     </main>
   </body>
 </html>
