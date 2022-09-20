@@ -38,3 +38,4 @@ addMovie(807356, "Watcher", "Horror", "movie");
 addMovie(807196, "Boiling Point", "Drama", "movie");
 addMovie(762504, "Nope", "horror", "movie");
 addMovie(107846, "Escape Plan", "Action", "movie");
+addMovie(773975, "End of the Road", "Thriller", "movie");

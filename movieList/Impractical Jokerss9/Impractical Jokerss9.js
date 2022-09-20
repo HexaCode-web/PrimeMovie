@@ -3,6 +3,7 @@ const btnEN = document.querySelector("#WatchEN");
 const movieAR = document.querySelector(".MovieAR");
 const movieEN = document.querySelector(".MovieEN");
 const poster = document.querySelector("#poster");
+const backdrop = document.querySelector(".background");
 const movieList = document.querySelector(".movies");
 const About = document.querySelector("#MovieInfo");
 const releseDate = document.querySelector("#Date");
@@ -128,6 +129,7 @@ const DefineMovie = (Data) => {
       }
     });
   };
+  backdrop.style.backgroundImage = `url(${apiPoster + Data.backdrop_path})`;
   poster.src = apiPoster + Data.poster_path;
   MovieLANG.innerHTML = `<span>Languages:</span>  ${Data.original_language}`;
   MovieDuration.innerHTML = `<span>Duration:</span> ${Data.episode_run_time} min`;

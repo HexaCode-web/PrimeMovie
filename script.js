@@ -129,7 +129,7 @@ input.addEventListener("keyup", (e) => {
           addMovie(
             //main function for printing out the movies
             element.ID, //api
-            `movieList/${element.Name}/${element.Name}.html`, //card
+            element.path, //card
             element.Genre, //card
             element.type
           );
