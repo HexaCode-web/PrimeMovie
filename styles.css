@@ -217,7 +217,7 @@ a {
   height: fit-content;
   border: 1px solid cyan;
 }
-.movies .movieCard {
+.movies .movieCard { 
   color: goldenrod;
   padding: 2px;
   width: 200px;
@@ -225,6 +225,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.5s;
   animation: appearfromnowhere 0.2s ease-out both;
 }
 @keyframes appearfromnowhere {
@@ -238,12 +239,12 @@ a {
   }
 }
 .movies .movieCard:hover {
+  padding-bottom: 15px;
   margin: 20px;
   border: 1.5px solid cyan;
   transition: 0.5s;
   border-radius: 15px;
-  border-bottom: none;
-  box-shadow: 0 0 140px 20px goldenrod;
+  box-shadow: 0 0 140px 5px goldenrod;
   transition-timing-function: ease-out;
 }
 .movies .movieCard .Star {
