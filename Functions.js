@@ -49,3 +49,4 @@ addMovie(776305, "Belle", "animation", "movie");
 addMovie(762504, "Nope", "horror", "movie");
 addMovie(913814, "Brian and Charles", "Comedy", "movie");
 addMovie(107846, "Escape Plan", "Action", "movie");
+addMovie(773975, "End of the Road", "Thriller", "movie");
