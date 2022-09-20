@@ -63,10 +63,10 @@ iframe {
   z-index: 0;
   display: flex;
   position: absolute;
-  width: 100%;
+  width: 95%;
   height: 740px;
   opacity: 0.1;
-  background-image: url(https://www.themoviedb.org/t/p/w600_and_h900_bestv2/r15SUgzjL8bablcdEkHk9T7TSRl.jpg);
+  background-image: url(share.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -78,7 +78,7 @@ body::-webkit-scrollbar,
           inner Info
 ============================================== */
 .content {
-  padding: 40px;
+  padding: 20px;
   font-family: "Roboto";
   text-align: center;
   color: goldenrod;
@@ -97,11 +97,11 @@ body::-webkit-scrollbar,
 #title {
   width: 100%;
   text-transform: uppercase;
-  font-size: 2.7rem;
+  font-size: 3rem;
 }
 #MovieInfo {
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 #MoreInfo {
   word-wrap: break-word;
