@@ -3,6 +3,13 @@ const btnEN = document.querySelector("#WatchEN");
 const movieAR = document.querySelector(".MovieAR");
 // const movieEN = document.querySelector(".MovieEN");
 const poster = document.querySelector("#poster");
+const disabled = document.querySelector(".disabled");
+disabled.addEventListener("mouseover", () => {
+  disabled.innerHTML = "<span>Soon</span>";
+});
+disabled.addEventListener("mouseleave", () => {
+  disabled.innerHTML = "<span>Watch in english!</span>";
+});
 const backdrop = document.querySelector(".background");
 const movieList = document.querySelector(".movies");
 const About = document.querySelector("#MovieInfo");
