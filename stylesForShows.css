@@ -34,13 +34,12 @@ html {
           video
 ============================================== */
 iframe {
-  top: 1400px;
-  position: absolute;
+  /* top: 1400px; */
   margin: 20px;
   height: 600px;
   width: 95%;
   display: none;
-  animation: slidefromtop 1s ease-out both;
+  animation: slidefromtop 0.5s ease-out both;
 }
 @keyframes slidefromtop {
   0% {
@@ -231,10 +230,11 @@ span {
   }
   body,
   .main {
+    height: fit-content;
     overflow: hidden;
   }
   .background {
-    height: 950px;
+    height: 980px;
   }
   .content {
     height: 900px;
@@ -254,6 +254,11 @@ span {
     justify-content: center;
     align-items: center;
   }
+  .info {
+    margin: 15px;
+    text-align: center;
+    width: 60%;
+  }
   #Genre {
     max-width: 60%;
   }
@@ -261,8 +266,6 @@ span {
     width: 100%;
   }
   iframe {
-    margin: 0px;
-    width: 95%;
-    top: 1700px;
+    max-width: 95%;
   }
 }

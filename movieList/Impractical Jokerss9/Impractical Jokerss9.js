@@ -200,11 +200,10 @@ const PrintSeason = async () => {
   });
 };
 const ShowEpisode = (num) => {
-  console.log(SeasonData.season_number);
-  console.log(DataBase[num]);
-  movieAR.src = DataBase[num];
-  movieAR.classList.add("active");
   WatchingNow.style.display = "flex";
-  WatchingNow.innerHTML = `you are now watching episode:<span>${num}</span>`;
+  console.log(SeasonData.episodes[num - 1]);
+  WatchingNow.innerHTML = SeasonData.episodes[num - 1].name;
+  movieAR.classList.add("active");
+  movieAR.src = DataBase[num];
 };
 addMovieinfo(59186);

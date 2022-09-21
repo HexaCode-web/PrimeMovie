@@ -247,7 +247,7 @@ a {
 }
 .movies .movieCard:hover {
   padding-bottom: 15px;
-  margin: 20px;
+  margin: 15px;
   border: 1.5px solid cyan;
   transition: 0.5s;
   border-radius: 15px;

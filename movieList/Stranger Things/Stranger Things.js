@@ -162,7 +162,7 @@ const FetchSeasonData = async (season) => {
     `https://api.themoviedb.org/3/tv/${Data.id}/season/${season}?api_key=2b2380189650d658fa1a06524ae8062a`
   );
   const data = await res.json();
-  console.log(data);
+  // console.log(data);
   SeasonData = data;
   switch (SeasonData.season_number) {
     case 1:
@@ -189,11 +189,9 @@ const PrintSeason = async () => {
   });
 };
 const ShowEpisode = (num) => {
-  console.log(SeasonData.season_number);
-  console.log(DataBase[num]);
-  movieAR.src = DataBase[num];
-  movieAR.classList.add("active");
   WatchingNow.style.display = "flex";
-  WatchingNow.innerHTML = `you are now watching episode:<span>${num}</span>`;
+  WatchingNow.innerHTML = SeasonData.episodes[num - 1].name;
+  movieAR.classList.add("active");
+  movieAR.src = DataBase[num];
 };
 addMovieinfo(66732);
