@@ -212,6 +212,7 @@ a {
   width: 50%;
 }
 .movieContainer {
+  min-width: 90%;
   transform: translateX(50px);
 }
 .movies {
@@ -221,7 +222,10 @@ a {
   display: flex;
   flex-wrap: wrap;
   width: 90%;
+  min-width: 90%;
   height: fit-content;
+  justify-content: center;
+  align-items: center;
   border: 1px solid cyan;
 }
 .movies .movieCard {
