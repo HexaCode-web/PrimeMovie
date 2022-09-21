@@ -168,6 +168,8 @@ span {
 .buttons {
   display: flex;
   gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .buttons li {
   list-style: none;
@@ -261,6 +263,6 @@ span {
   iframe {
     margin: 0px;
     width: 95%;
-    top: 1200px;
+    top: 1700px;
   }
 }
