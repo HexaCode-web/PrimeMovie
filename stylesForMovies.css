@@ -111,7 +111,8 @@ body::-webkit-scrollbar,
   margin-top: 15px;
   text-align: left;
   flex-direction: column;
-  width: 900px;
+  width: 100%;
+  max-width: 800px;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 40% 30% 30%;
@@ -125,6 +126,7 @@ body::-webkit-scrollbar,
   height: fit-content;
 }
 span {
+  color: rgb(196, 187, 187);
   font-weight: bolder;
 }
 #MoreInfo a {
@@ -146,14 +148,15 @@ span {
   margin-top: 20px;
   font-family: Ubuntu;
   grid-area: btn;
-  background-color: rgba(86, 95, 119);
-  color: goldenrod;
+  background-color: #00acc1;
+  color: white;
   border-radius: 100px;
   border: none;
   font-size: 2rem;
   height: 50px;
   width: 60%;
 }
+
 .Watch:hover {
   transition: all 0.1s;
   scale: 1.1;
@@ -161,6 +164,12 @@ span {
 .Watch:active {
   transition: all 0.1s;
   scale: 0.9;
+}
+.disabled {
+  background-color: grey;
+}
+.disabled:hover {
+  scale: 1;
 }
 /* ================================================
           Others RECOOmndations
@@ -203,7 +212,7 @@ span {
   color: goldenrod;
   border-radius: 10px;
   border: none;
-  background-color: rgba(86, 95, 119);
+  background-color: #00acc1;
   width: 90%;
   height: 40px;
 }
@@ -221,32 +230,45 @@ span {
 ul {
   list-style: none;
 }
-@media (max-width: 500px) {
+@media (max-width: 850px) {
   html {
     font-size: 10px;
   }
   .Info {
-    height: 890px;
+    overflow: visible;
+    padding: 20px;
+    height: 1000px;
   }
   .background {
-    display: none;
+    height: 950px;
   }
   .content {
-    height: 820px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: hidden;
+    height: 900px;
+    grid-template-columns: none;
+    grid-template-rows: 450px 450px;
   }
   .content img {
-    width: 150px;
-    height: 240px;
+    width: 250px;
+    height: 340px;
   }
   .button-wrapper {
     position: static;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #Genre {
+    max-width: 250px;
+  }
+  #MoreInfo {
     width: 100%;
   }
   iframe {
-    top: 1100px;
+    margin: 0px;
+    width: 95%;
+    top: 1200px;
   }
 }

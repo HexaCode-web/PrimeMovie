@@ -34,6 +34,7 @@ body::-webkit-scrollbar {
   color: white;
   font-weight: bolder;
   font-family: overpass;
+  transition: 0.5s;
   background-color: #00acc1;
 
   width: 300px;
@@ -64,7 +65,8 @@ body::-webkit-scrollbar {
   margin-left: 120px;
 }
 .GenreList {
-  transform: translate(-250px, 110px);
+  z-index: 1;
+  /* transform: translate(-250px, 110px); */
   width: 100px;
   height: 150px;
   border-radius: 15px;
@@ -185,6 +187,7 @@ a {
   width: 50%;
 }
 .Search #SearchBar {
+  padding-left: 10px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   font-size: 2rem;
@@ -199,13 +202,16 @@ a {
   padding-left: 1%;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  width: 10%;
+  width: 50px;
   height: 62px;
   background-color: #00acc1;
   border: none;
 }
 .Search .Icon img {
-  width: 40px;
+  width: 50%;
+}
+.movieContainer {
+  transform: translateX(50px);
 }
 .movies {
   overflow: hidden;
@@ -263,15 +269,27 @@ a {
   transition: all 0.1s;
 }
 .movies button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   margin-top: 10px;
   margin-bottom: 0;
   color: white;
   border-radius: 10px;
   border: none;
-  background-color: rgba(86, 95, 119);
+  background-color: #00acc1;
   width: 90%;
   height: 40px;
+}
+.movies button a {
+  color: white;
+  margin: 0;
+}
+.movies button a:hover {
+  color: white;
+  scale: 1.3;
+  transition: all 0.1s;
 }
 .moviepic img {
   border-radius: 15px;
@@ -280,4 +298,40 @@ a {
 }
 ul {
   list-style: none;
+}
+@media only screen and (max-width: 800px) {
+  /* mobile */
+  .movies .movieCard:hover {
+    margin: 5px;
+  }
+  html {
+    font-size: 12px;
+  }
+  .filters ul {
+    flex-wrap: wrap;
+  }
+  .logo {
+    width: 60px;
+  }
+  .GenreList {
+    width: 70px;
+    gap: 7px;
+  }
+  .movieCard a,
+  .movieCard .genre,
+  .movieCard #releaseDate,
+  .movieCard #rating {
+    font-size: 16px;
+  }
+  .Search {
+    width: 120%;
+  }
+  .movieContainer {
+    width: 95%;
+    transform: translateX(0px);
+    min-width: 495px;
+  }
+  .movies {
+    width: 100%;
+  }
 }

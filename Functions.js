@@ -32,7 +32,11 @@ const UpdateUI = (
   movieInfo.Date = release_date;
   return movieInfo;
 };
+addMovie(758724, "The Cellar", "Horror", "movie");
+addMovie(1006851, "Office Invasion", "Comedy", "movie");
+addShow(66732, "Stranger Things", "Drama", "tv");
 addShow(59186, "Impractical Jokerss9", "Comedy", "tv");
+addMovie(773975, "End of the Road", "Thriller", "movie");
 addMovie(807356, "Watcher", "Horror", "movie");
 addMovie(480042, "Escape Plan The Extractors", "Action", "movie");
 addMovie(440471, "Escape Plan 2 Hades", "Action", "movie");
@@ -49,4 +53,3 @@ addMovie(776305, "Belle", "animation", "movie");
 addMovie(762504, "Nope", "horror", "movie");
 addMovie(913814, "Brian and Charles", "Comedy", "movie");
 addMovie(107846, "Escape Plan", "Action", "movie");
-addMovie(773975, "End of the Road", "Thriller", "movie");

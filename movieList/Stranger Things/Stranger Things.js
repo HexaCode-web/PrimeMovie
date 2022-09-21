@@ -1,7 +1,7 @@
 const btnAR = document.querySelector("#WatchAR");
 const btnEN = document.querySelector("#WatchEN");
 const movieAR = document.querySelector(".MovieAR");
-const movieEN = document.querySelector(".MovieEN");
+// const movieEN = document.querySelector(".MovieEN");
 const poster = document.querySelector("#poster");
 const backdrop = document.querySelector(".background");
 const movieList = document.querySelector(".movies");
@@ -20,53 +20,60 @@ const apiPoster = "https://image.tmdb.org/t/p/w500/";
 let clicks = 0;
 let Data;
 let SeasonData;
-let s9DB = [
-  "0",
-  "https://vadbam.com/embed-8ax4hjc4450z.html",
-  "https://vadbam.com/embed-3lunv4pd3w6q.html",
-  "https://vadbam.com/embed-78tagwz6kon2.html",
-  "https://vadbam.com/embed-n5b2bmuziahq.html",
-  "https://vadbam.com/embed-1b5h9vtaoj70.html",
-  "https://vadbam.com/embed-vybsdlo4lc47.html",
-  "https://vadbam.com/embed-th56kv3s0d0f.html",
-  "https://vadbam.com/embed-w6x9xlqkz8mt.html",
-  "https://vadbam.com/embed-rzisoesjkrai.html",
-  "https://vadbam.com/embed-3y8viv7loskr.html",
-  "https://vadbam.com/embed-3bhro3tpdnrc.html",
-  "https://vadbam.com/embed-qdrw5bn2s1kk.html",
-  "https://vadbam.com/embed-jk0010qz8yh2.html",
-  "https://vadbam.com/embed-uq4afexnhvd6.html",
-  "https://vadbam.com/embed-f097xq90ll63.html",
-  "https://vadbam.com/embed-2lmuyi4jksn3.html",
-  "https://vadbam.com/embed-p54fa89i7wlm.html",
-  "https://vadbam.com/embed-uj8tn22q99zv.html",
-  "https://vadbam.com/embed-ve0hhpg0bugg.html",
-  "https://vadbam.com/embed-ld6pzpn2ret7.html",
-  "https://vadbam.com/embed-j4peaypq1tre.html",
-  "https://vadbam.com/embed-watxy0don4an.html",
-  "https://vadbam.com/embed-4966oo0xd980.html",
-  "https://vadbam.com/embed-sv490r8ar01b.html",
+let s1DB = [
   "",
-  "",
-  "",
-  "",
+  "https://vadbom.com/embed-m2ucpqcymlbm.html",
+  "https://vadbom.com/embed-w1ro8ee33ju3.html",
+  "https://vadbom.com/embed-9u75rwr7wkcs.html",
+  "https://vadbom.com/embed-32mve759xvs0.html",
+  "https://vadbom.com/embed-keylzsraumik.html",
+  "https://vadbom.com/embed-6ln89ilngxjt.html",
+  "https://vadbom.com/embed-olmt7agc772g.html",
+  "https://vadbom.com/embed-3bfp9xox7eip.html",
 ];
-let s8DB = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
-let s1DB = [];
-let s2DB = [];
-let s3DB = [];
-let s4DB = [];
-let s5DB = [];
-let s6DB = [];
-let s7DB = [];
+let s2DB = [
+  "",
+  "https://vadbom.com/embed-ldy9rggpb75x.html",
+  "https://vadbom.com/embed-l4l1j8zz3qwi.html",
+  "https://vadbom.com/embed-uzo5ou2xkur2.html",
+  "https://vadbom.com/embed-mob0cjunvvzd.html",
+  "https://vadbom.com/embed-b3lz51xmyszu.html",
+  "https://vadbom.com/embed-apir78qhvw5v.html",
+  "https://vadbom.com/embed-gvmupb3c9wke.html",
+  "https://vadbom.com/embed-qra43mlt7x0k.html",
+  "https://vadbom.com/embed-8vijdfxi292c.html",
+];
+let s3DB = [
+  "",
+  "https://vadbom.com/embed-79wzzzpkoggz.html",
+  "https://vadbom.com/embed-8p6lbmpa6bu9.html",
+  "https://vadbom.com/embed-825gilquu5hg.html",
+  "https://vadbom.com/embed-3litsw1df440.html",
+  "https://vadbom.com/embed-g6q2vaggwcu9.html",
+  "https://vadbom.com/embed-dgu58to70saa.html",
+  "https://vadbom.com/embed-0c7zie4ok13a.html",
+  "https://vadbom.com/embed-xhalslzim385.html",
+];
+let s4DB = [
+  "",
+  "https://vidbam.org/embed-70u82yfm019j.html",
+  "https://vidbam.org/embed-b994fewaqbcm.html",
+  "https://vidbam.org/embed-3p72wpw1j4rv.html",
+  "https://vidbam.org/embed-uydrlyl1bbut.html",
+  "https://vidbam.org/embed-52k4vmj94xau.html",
+  "https://vidbam.org/embed-z9ate95n3zac.html",
+  "https://vidbam.org/embed-jnqtuzxdnr8l.html",
+  "https://vidbam.org/embed-imtfx6y0kkln.html",
+  "https://vidbam.org/embed-b2mq6myxgugz.html",
+];
+
 let DataBase;
 btnAR.addEventListener("click", () => {
   season.classList.add("animations");
 });
 // btnEN.addEventListener("click", () => {
-//   movieEN.classList.toggle("active");
-//   movieAR.classList.remove("active");
-//   window.scrollTo(0, 1000);
+//   s1DB = s1dbEN;
+//   season.classList.add("animations");
 // });
 const addMovieinfo = async (ID, img) => {
   const Data = await GetRate(ID);
@@ -86,8 +93,7 @@ const printCount = () => {
   });
 };
 const printSeasons = () => {
-  Data.seasons.shift();
-  Data.seasons.slice(8).forEach((element) => {
+  Data.seasons.forEach((element) => {
     //remove when you add new seaons
     season.innerHTML += `<li><button onclick="GetSeasonData(${Data.seasons.indexOf(
       element
@@ -95,7 +101,6 @@ const printSeasons = () => {
   });
 };
 const printEP = () => {
-  Data.seasons.shift();
   Data.seasons.forEach((element) => {
     eplist.innerHTML += `<li><button onclick="showSeason(${Data.seasons.indexOf(
       element
@@ -157,6 +162,7 @@ const FetchSeasonData = async (season) => {
     `https://api.themoviedb.org/3/tv/${Data.id}/season/${season}?api_key=2b2380189650d658fa1a06524ae8062a`
   );
   const data = await res.json();
+  console.log(data);
   SeasonData = data;
   switch (SeasonData.season_number) {
     case 1:
@@ -171,21 +177,6 @@ const FetchSeasonData = async (season) => {
     case 4:
       DataBase = s4DB;
       break;
-    case 5:
-      DataBase = s5DB;
-      break;
-    case 6:
-      DataBase = s6DB;
-      break;
-    case 7:
-      DataBase = s7DB;
-      break;
-    case 8:
-      DataBase = s8DB;
-      break;
-    case 9:
-      DataBase = s9DB;
-      break;
     default:
       break;
   }
@@ -193,8 +184,6 @@ const FetchSeasonData = async (season) => {
 };
 const PrintSeason = async () => {
   eplist.innerHTML = ``;
-  SeasonData.episodes.pop();
-  SeasonData.episodes.pop();
   SeasonData.episodes.forEach((element) => {
     eplist.innerHTML += `<li><button onclick="ShowEpisode(${element.episode_number})">${element.episode_number}</button></li>`;
   });
@@ -207,4 +196,4 @@ const ShowEpisode = (num) => {
   WatchingNow.style.display = "flex";
   WatchingNow.innerHTML = `you are now watching episode:<span>${num}</span>`;
 };
-addMovieinfo(59186);
+addMovieinfo(66732);
