@@ -112,7 +112,7 @@ body::-webkit-scrollbar,
   width: 900px;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 40% 30% 30%;
+  grid-template-rows: fr fr fr;
   font-size: 1.7rem;
 }
 #MoreInfo p {
