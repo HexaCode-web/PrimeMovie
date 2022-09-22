@@ -1,3 +1,23 @@
+const New1 = document.querySelector(".itemone");
+const New2 = document.querySelector(".itemtwo");
+const New3 = document.querySelector(".itemthree");
+const New4 = document.querySelector(".itemfour");
+const AddMovieRecent = (varible, movieNum, color = "white") => {
+  // console.log(movieDB);
+  //console.log(varible);
+  varible.style.backgroundImage = `url(${
+    apiPoster + movieDB[movieNum].backdrop_path
+  })`;
+  let varHeadLine = varible
+    .querySelector(".container")
+    .querySelector(".headline");
+  let VarOverView = varible
+    .querySelector(".container")
+    .querySelector(".overview");
+  VarOverView.style.color = color;
+  varHeadLine.innerHTML = `<a href="/movieList/${movieDB[movieNum].Name}/${movieDB[movieNum].Name}.html">${movieDB[movieNum].Name}</a>`;
+  VarOverView.innerHTML = movieDB[movieNum].overview;
+};
 const UpdateUI = (
   Poster,
   Rating,
@@ -6,9 +26,10 @@ const UpdateUI = (
   genre,
   ID,
   release_date,
-  type
+  type,
+  Banner,
+  overview
 ) => {
-  console.log("updateui was called");
   const copyTemp = document.importNode(temp, true);
   copyTemp.querySelector(".Poster").innerHTML = `<img
   src = ${Poster}>`;
@@ -30,26 +51,35 @@ const UpdateUI = (
   movieInfo.ID = ID;
   movieInfo.path = Path;
   movieInfo.Date = release_date;
+  movieInfo.backdrop_path = Banner;
+  movieInfo.overview = overview;
   return movieInfo;
 };
-addMovie(758724, "The Cellar", "Horror", "movie");
-addMovie(1006851, "Office Invasion", "Comedy", "movie");
-addShow(66732, "Stranger Things", "Drama", "tv");
-addShow(59186, "Impractical Jokerss9", "Comedy", "tv");
-addMovie(773975, "End of the Road", "Thriller", "movie");
-addMovie(807356, "Watcher", "Horror", "movie");
-addMovie(480042, "Escape Plan The Extractors", "Action", "movie");
-addMovie(440471, "Escape Plan 2 Hades", "Action", "movie");
-addMovie(760741, "Beast", "thriller", "movie");
-addMovie(249070, "Hitman Agent 47", "Action", "movie");
-addMovie(991247, "Kingslayer", "Action", "movie");
-addMovie(1007205, "York Witches Society", "horror", "movie");
-addMovie(833339, "Speak no Evil", "horror", "movie");
-addMovie(508947, "Turning Red", "animation", "movie");
-addMovie(807196, "Boiling Point", "Drama", "movie");
-addMovie(656663, "Jackass Forever", "Comedy", "movie");
-addMovie(766507, "Prey", "Thriller", "movie");
-addMovie(776305, "Belle", "animation", "movie");
-addMovie(762504, "Nope", "horror", "movie");
-addMovie(913814, "Brian and Charles", "Comedy", "movie");
-addMovie(107846, "Escape Plan", "Action", "movie");
+async function Main() {
+  await addMovie(758724, "The Cellar", "Horror", "movie");
+  await addMovie(1006851, "Office Invasion", "Comedy", "movie");
+  await addShow(66732, "Stranger Things", "Drama", "tv");
+  await addShow(59186, "Impractical Jokers", "Comedy", "tv");
+  await addMovie(773975, "End of the Road", "Thriller", "movie");
+  await addMovie(807356, "Watcher", "Horror", "movie");
+  await addMovie(480042, "Escape Plan The Extractors", "Action", "movie");
+  await addMovie(440471, "Escape Plan 2 Hades", "Action", "movie");
+  await addMovie(760741, "Beast", "thriller", "movie");
+  await addMovie(249070, "Hitman Agent 47", "Action", "movie");
+  await addMovie(991247, "Kingslayer", "Action", "movie");
+  await addMovie(1007205, "York Witches Society", "horror", "movie");
+  await addMovie(833339, "Speak no Evil", "horror", "movie");
+  await addMovie(508947, "Turning Red", "animation", "movie");
+  await addMovie(807196, "Boiling Point", "Drama", "movie");
+  await addMovie(656663, "Jackass Forever", "Comedy", "movie");
+  await addMovie(766507, "Prey", "Thriller", "movie");
+  await addMovie(776305, "Belle", "animation", "movie");
+  await addMovie(762504, "Nope", "horror", "movie");
+  await addMovie(913814, "Brian and Charles", "Comedy", "movie");
+  await addMovie(107846, "Escape Plan", "Action", "movie");
+  AddMovieRecent(New1, 0);
+  AddMovieRecent(New2, 1);
+  AddMovieRecent(New3, 2);
+  AddMovieRecent(New4, 3, "white");
+}
+Main();

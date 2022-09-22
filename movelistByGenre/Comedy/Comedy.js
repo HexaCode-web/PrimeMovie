@@ -32,7 +32,7 @@ const UpdateUI = (
   return movieInfo;
 };
 addMovie(1006851, "Office Invasion", "Comedy", "movie");
-addShow(59186, "Impractical Jokerss9", "Comedy", "tv");
+addShow(59186, "Impractical Jokers", "Comedy", "tv");
 addMovie(656663, "Jackass Forever", "Comedy", "movie");
 addMovie(508947, "Turning Red", "animation", "movie");
 addMovie(913814, "Brian and Charles", "Comedy", "movie");
