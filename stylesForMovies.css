@@ -259,6 +259,10 @@ ul {
     grid-template-columns: none;
     grid-template-rows: 450px 450px;
   }
+  .content h1 {
+    margin-top: 50px;
+    font-size: 3rem;
+  }
   .content img {
     width: 250px;
     height: 340px;
