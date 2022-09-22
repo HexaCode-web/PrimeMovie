@@ -56,6 +56,7 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
+  await addMovie(524434, "Eternals", "Action", "movie");
   await addMovie(740925, "No One Gets Out Alive", "Horror", "movie");
   await addMovie(787723, "13 Minutes", "Action", "movie");
   await addMovie(756999, "The Black Phone", "Horror", "movie");

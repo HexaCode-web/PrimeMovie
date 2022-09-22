@@ -202,6 +202,13 @@ yearList
 #myCarousel {
   width: 70%;
 }
+#header {
+  text-align: center;
+  color: goldenrod;
+}
+#header:hover {
+  transform: scale(1);
+}
 #myCarousel .carousel-item {
   border-radius: 20px;
   width: 100%;
@@ -224,14 +231,14 @@ yearList
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
 }
-#myCarousel h1 {
+.carousel-item h1 {
   transform: scale(1);
   transition: all 0.5s;
 }
-#myCarousel h1:hover {
+.carousel-item h1:hover {
   transform: scale(1.2);
 }
-#myCarousel a:hover {
+.carousel-item a:hover {
   color: goldenrod;
 }
 /* ====================================================  
