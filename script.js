@@ -117,17 +117,23 @@ input.addEventListener("keyup", (e) => {
       for (let item of movieDB) {
         //loops over the database
         if (item.Name.toUpperCase().includes(searchString.toUpperCase())) {
-          flitered.push(item); //pushes the whole movie object that matches
+          flitered.push(item);
+          //pushes the whole movie object that matches
         }
       }
-      if (flitered.lengh <= 0) {
+      //if not clear the list and print the new elements
+      if (flitered.length === 0) {
         //if the new database is empty
-        alert("no movie found");
+        let result = document.createElement("h1");
+        result.innerHTML = "no Movie found";
+        result.style.color = "goldenrod";
+        ClearingList();
+        movieList.appendChild(result);
+        return;
       } else {
-        //if not clear the list and print the new elements
         ClearingList();
         flitered.forEach((element) => {
-          addMovie(
+          NewList(
             //main function for printing out the movies
             element.ID, //api
             element.path, //card
@@ -212,14 +218,11 @@ const GetRate = async (ID, type) => {
   const Data = await res.json();
   return Data;
 };
-GenreShow.addEventListener("mouseover", () => {
+GenreShow.addEventListener("click", () => {
   //shows the genre list
   GenreList.classList.toggle("active");
 });
-GenreShow.addEventListener("mouseleave", () => {
-  //shows the genre list
-  GenreList.classList.toggle("active");
-});
+
 window.addEventListener("scroll", () => {
   if (GenreList.classList.contains("active")) {
     GenreList.classList.toggle("active");

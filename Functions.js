@@ -15,7 +15,7 @@ const AddMovieRecent = (varible, movieNum, color = "white") => {
     .querySelector(".container")
     .querySelector(".overview");
   VarOverView.style.color = color;
-  varHeadLine.innerHTML = `<a href="/movieList/${movieDB[movieNum].Name}/${movieDB[movieNum].Name}.html">${movieDB[movieNum].Name}</a>`;
+  varHeadLine.innerHTML = `<a href="movieList/${movieDB[movieNum].Name}/${movieDB[movieNum].Name}.html">${movieDB[movieNum].Name}</a>`;
   VarOverView.innerHTML = movieDB[movieNum].overview;
 };
 const UpdateUI = (
@@ -56,6 +56,9 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
+  await addMovie(740925, "No One Gets Out Alive", "Horror", "movie");
+  await addMovie(787723, "13 Minutes", "Action", "movie");
+  await addMovie(756999, "The Black Phone", "Horror", "movie");
   await addMovie(758724, "The Cellar", "Horror", "movie");
   await addMovie(1006851, "Office Invasion", "Comedy", "movie");
   await addShow(66732, "Stranger Things", "Drama", "tv");

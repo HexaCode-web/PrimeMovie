@@ -31,8 +31,13 @@ const UpdateUI = (
   movieInfo.Date = release_date;
   return movieInfo;
 };
-addMovie(760741, "Beast", "thriller", "movie");
-addMovie(807356, "Watcher", "Horror", "movie");
-addMovie(1007205, "York Witches Society", "horror", "movie");
-addMovie(833339, "Speak no Evil", "horror", "movie");
-addMovie(762504, "Nope", "horror", "movie");
+async function Main() {
+  await addMovie(740925, "No One Gets Out Alive", "Horror", "movie");
+  await addMovie(756999, "The Black Phone", "Horror", "movie");
+  await addMovie(760741, "Beast", "thriller", "movie");
+  await addMovie(807356, "Watcher", "Horror", "movie");
+  await addMovie(1007205, "York Witches Society", "horror", "movie");
+  await addMovie(833339, "Speak no Evil", "horror", "movie");
+  await addMovie(762504, "Nope", "horror", "movie");
+}
+Main();

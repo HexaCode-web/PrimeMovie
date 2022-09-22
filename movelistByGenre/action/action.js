@@ -31,8 +31,11 @@ const UpdateUI = (
   movieInfo.Date = release_date;
   return movieInfo;
 };
-addMovie(480042, "Escape Plan The Extractors", "Action", "movie");
-addMovie(440471, "Escape Plan 2 Hades", "Action", "movie");
-addMovie(991247, "Kingslayer", "Action", "movie");
-addMovie(249070, "Hitman Agent 47", "Action", "movie");
-addMovie(107846, "Escape Plan", "Action", "movie");
+async function Main() {
+  await addMovie(480042, "Escape Plan The Extractors", "Action", "movie");
+  await addMovie(440471, "Escape Plan 2 Hades", "Action", "movie");
+  await addMovie(991247, "Kingslayer", "Action", "movie");
+  await addMovie(249070, "Hitman Agent 47", "Action", "movie");
+  await addMovie(107846, "Escape Plan", "Action", "movie");
+}
+Main();

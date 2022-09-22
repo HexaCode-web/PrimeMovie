@@ -31,5 +31,8 @@ const UpdateUI = (
   movieInfo.Date = release_date;
   return movieInfo;
 };
-addMovie(508947, "Turning Red", "animation", "movie");
-addMovie(776305, "Belle", "animation", "movie");
+async function Main() {
+  await addMovie(508947, "Turning Red", "animation", "movie");
+  await addMovie(776305, "Belle", "animation", "movie");
+}
+Main();

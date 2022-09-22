@@ -31,8 +31,11 @@ const UpdateUI = (
   movieInfo.Date = release_date;
   return movieInfo;
 };
-addMovie(1006851, "Office Invasion", "Comedy", "movie");
-addShow(59186, "Impractical Jokers", "Comedy", "tv");
-addMovie(656663, "Jackass Forever", "Comedy", "movie");
-addMovie(508947, "Turning Red", "animation", "movie");
-addMovie(913814, "Brian and Charles", "Comedy", "movie");
+async function Main() {
+  await addMovie(1006851, "Office Invasion", "Comedy", "movie");
+  await addShow(59186, "Impractical Jokers", "Comedy", "tv");
+  await addMovie(656663, "Jackass Forever", "Comedy", "movie");
+  await addMovie(508947, "Turning Red", "animation", "movie");
+  await addMovie(913814, "Brian and Charles", "Comedy", "movie");
+}
+Main();

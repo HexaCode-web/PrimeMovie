@@ -31,5 +31,8 @@ const UpdateUI = (
   movieInfo.Date = release_date;
   return movieInfo;
 };
-addMovie(807196, "Boiling Point", "Drama", "movie");
-addMovie(776305, "Belle", "animation", "movie");
+async function Main() {
+  await addMovie(807196, "Boiling Point", "Drama", "movie");
+  await addMovie(776305, "Belle", "animation", "movie");
+}
+Main();
