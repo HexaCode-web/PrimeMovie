@@ -312,6 +312,7 @@ yearList
   width: 200px;
   height: 420px;
   display: flex;
+  text-align: center;
   flex-direction: column;
   align-items: center;
   transition: all 0.5s;
@@ -388,6 +389,47 @@ yearList
   display: flex;
 }
 @media only screen and (max-width: 800px) {
+  /* mobile */
+  .movies .movieCard:hover {
+    margin: 5px;
+  }
+  html {
+    font-size: 12px;
+  }
+  .filters ul {
+    flex-wrap: wrap;
+  }
+  .logo {
+    width: 60px;
+  }
+  .GenreList {
+    width: 70px;
+    gap: 7px;
+  }
+  .movieCard a,
+  .movieCard .genre,
+  .movieCard #releaseDate,
+  .movieCard #rating {
+    font-size: 16px;
+  }
+  .Search {
+    width: 120%;
+  }
+  .movieContainer {
+    width: 90%;
+    transform: translateX(10px);
+    /* min-width: 450px; */
+  }
+  .movies {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0px;
+    padding-top: 15px;
+    width: 100%;
+  }
+}
+@media only screen and (orientation: landscape) and(max-width:1000px) {
   /* mobile */
   .movies .movieCard:hover {
     margin: 5px;

@@ -242,7 +242,58 @@ span {
 ul {
   list-style: none;
 }
+.stroke {
+  color: goldenrod;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
 @media (max-width: 850px) {
+  html {
+    font-size: 10px;
+  }
+  .Info {
+    overflow: visible;
+    padding: 20px;
+    height: 1000px;
+  }
+  .background {
+    height: 950px;
+  }
+  .content {
+    height: 900px;
+    grid-template-columns: none;
+    grid-template-rows: 450px 450px;
+  }
+  .content h1 {
+    margin-top: 50px;
+    font-size: 3rem;
+  }
+  .content img {
+    width: 250px;
+    height: 340px;
+  }
+  .button-wrapper {
+    position: static;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #Genre {
+    max-width: 250px;
+  }
+  #MoreInfo {
+    width: 100%;
+  }
+  iframe {
+    margin: 0px;
+    width: 95%;
+    top: 1200px;
+  }
+}
+@media (orientation: landscape) and (max-width: 1000px) {
   html {
     font-size: 10px;
   }

@@ -56,6 +56,8 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
+  await addMovie(550988, "Free Guy", "Comedy", "movie");
+  await addMovie(836225, "The Exorcism of God", "Horror", "movie");
   await addMovie(524434, "Eternals", "Action", "movie");
   await addMovie(740925, "No One Gets Out Alive", "Horror", "movie");
   await addMovie(787723, "13 Minutes", "Action", "movie");
