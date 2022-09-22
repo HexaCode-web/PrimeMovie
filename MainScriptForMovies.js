@@ -14,6 +14,7 @@ const MovieTitle = document.querySelector("#title");
 const MovieDuration = document.querySelector("#duration");
 const MovieLANG = document.querySelector("#language");
 const countries = document.querySelector("#countries");
+const buttonwrapper = document.querySelector(".button-wrapper");
 const movieDB = [];
 let clicks = 0;
 let data;
@@ -25,6 +26,11 @@ btnAR.addEventListener("click", () => {
 btnEN.addEventListener("click", () => {
   movieEN.classList.toggle("active");
   movieAR.classList.remove("active");
+  const recommended = document.createElement("div");
+  recommended.classList.add("recommended");
+  recommended.innerHTML = `<p>recommended server is :</p>`;
+  recommended.innerHTML += `<img src="/images/recommendation.jpg">`;
+  buttonwrapper.appendChild(recommended);
   window.scrollTo(0, 1000);
 });
 const addMovieinfo = async (ID) => {
@@ -44,24 +50,32 @@ const DefineMovie = (Data) => {
   const printgenre = () => {
     Data.genres.forEach((element) => {
       if (element.name === "Thriller") {
-        Genreinfo.innerHTML += `<a href="../../movelistByGenre/thriller/thriller.html">${element.name} </a> `;
+        Genreinfo.innerHTML += `<a href="../../movelistByGenre/thriller/thriller.html">${element.name}, </a> `;
       }
       if (element.name === "Horror") {
-        Genreinfo.innerHTML += `<a href="../../movelistByGenre/horror/horror.html">${element.name} </a> `;
+        Genreinfo.innerHTML += `<a href="../../movelistByGenre/horror/horror.html">${element.name}, </a> `;
       }
       if (element.name === "Action") {
-        Genreinfo.innerHTML += `<a href="../../movelistByGenre/action/action.html">${element.name} </a> `;
+        Genreinfo.innerHTML += `<a href="../../movelistByGenre/action/action.html">${element.name}, </a> `;
       }
       if (element.name === "Animation") {
-        Genreinfo.innerHTML += `<a href="../../movelistByGenre/Animation/Animation.html">${element.name} </a> `;
+        Genreinfo.innerHTML += `<a href="../../movelistByGenre/Animation/Animation.html">${element.name}, </a> `;
+      }
+      if (element.name === "Drama") {
+        Genreinfo.innerHTML += `<a href="../../movelistByGenre/Drama/Drama.html">${element.name}, </a> `;
+      }
+      if (element.name === "Comedy") {
+        Genreinfo.innerHTML += `<a href="../../movelistByGenre/Comedy/Comedy.html">${element.name}, </a> `;
       }
       if (
         element.name !== "Thriller" &&
         element.name !== "Action" &&
         element.name !== "Horror" &&
-        element.name !== "Animation"
+        element.name !== "Animation" &&
+        element.name !== "Drama" &&
+        element.name !== "Comedy"
       ) {
-        Genreinfo.innerHTML += `${element.name}  `;
+        Genreinfo.innerHTML += `${element.name},  `;
       }
     });
   };

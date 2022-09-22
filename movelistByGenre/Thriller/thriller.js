@@ -32,15 +32,15 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
-  await addMovie(740925, "No One Gets Out Alive", "Horror", "movie");
-  await addMovie(756999, "The Black Phone", "Horror", "movie");
-  await addMovie(760741, "Beast", "thriller", "movie");
+  await addMovie(740925, "No One Gets Out Alive", "Thriller", "movie");
+  await addMovie(756999, "The Black Phone", "Thriller", "movie");
+  await addMovie(760741, "Beast", "Thriller", "movie");
   await addMovie(766507, "Prey", "Thriller", "movie");
-  await addMovie(249070, "Hitman Agent 47", "Action", "movie");
-  await addMovie(807356, "Watcher", "Horror", "movie");
-  await addMovie(807196, "Boiling Point", "Drama", "movie");
-  await addMovie(762504, "Nope", "horror", "movie");
-  await addMovie(107846, "Escape Plan", "Action", "movie");
+  await addMovie(249070, "Hitman Agent 47", "Thriller", "movie");
+  await addMovie(807356, "Watcher", "Thriller", "movie");
+  await addMovie(807196, "Boiling Point", "Thriller", "movie");
+  await addMovie(762504, "Nope", "Thriller", "movie");
+  await addMovie(107846, "Escape Plan", "Thriller", "movie");
   await addMovie(773975, "End of the Road", "Thriller", "movie");
 }
 Main();

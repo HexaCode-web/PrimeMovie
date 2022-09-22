@@ -32,6 +32,7 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
+  await addMovie(617653, "The Last Duel", "Action", "movie");
   await addMovie(524434, "Eternals", "Action", "movie");
   await addMovie(480042, "Escape Plan The Extractors", "Action", "movie");
   await addMovie(440471, "Escape Plan 2 Hades", "Action", "movie");
