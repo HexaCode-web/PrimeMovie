@@ -166,6 +166,7 @@ const NewList = async (ID, Path, genre, type) => {
       Data.first_air_date,
       type
     );
+    movieList.scrollIntoView();
   } else {
     UpdateUI(
       apiPoster + Data.poster_path,
@@ -176,6 +177,7 @@ const NewList = async (ID, Path, genre, type) => {
       ID,
       Data.release_date
     );
+    movieList.scrollIntoView();
   }
 };
 const addMovie = async (ID, Path, genre, type) => {
