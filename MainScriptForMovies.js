@@ -16,22 +16,17 @@ const MovieLANG = document.querySelector("#language");
 const countries = document.querySelector("#countries");
 const buttonwrapper = document.querySelector(".button-wrapper");
 const recommended = document.createElement("div");
-recommended.classList.add("recommended");
-recommended.innerHTML = `<p>recommended server is :</p>`;
-recommended.innerHTML += `<img src="../../images/recommendation.jpg">`;
+
 const movieDB = [];
 let clicks = 0;
 let data;
 btnAR.addEventListener("click", () => {
   movieAR.classList.toggle("active");
   movieEN.classList.remove("active");
-  window.scrollTo(0, 1000);
 });
 btnEN.addEventListener("click", () => {
   movieEN.classList.toggle("active");
   movieAR.classList.remove("active");
-  About.appendChild(recommended);
-  window.scrollTo(0, 1000);
 });
 const addMovieinfo = async (ID) => {
   const Data = await GetRate(ID);
