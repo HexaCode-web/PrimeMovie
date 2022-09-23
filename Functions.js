@@ -2,11 +2,20 @@ const New1 = document.querySelector(".itemone");
 const New2 = document.querySelector(".itemtwo");
 const New3 = document.querySelector(".itemthree");
 const New4 = document.querySelector(".itemfour");
+const request = document.querySelector("#request");
+const Form = document.querySelector("#Form");
+const FormBtn = document.querySelector("#my-form-button");
+request.addEventListener("click", () => {
+  console.log("hi");
+  Form.classList.toggle("active");
+});
+FormBtn.addEventListener("onclick", () => {
+  Form.classList.toggle("active");
+});
 const AddMovieRecent = (varible, movieNum, color = "white") => {
   // console.log(movieDB);
   //console.log(varible);
   varible.style.backgroundImage = `url(${movieDB[movieNum].backdrop_path})`;
-  debugger;
   let varHeadLine = varible
     .querySelector(".container")
     .querySelector(".headline");
@@ -54,11 +63,47 @@ const UpdateUI = (
   movieInfo.overview = overview;
   return movieInfo;
 };
+var form = document.getElementById("my-form");
+
+async function handleSubmit(event) {
+  event.preventDefault();
+  var status = document.getElementById("my-form-status");
+  var data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset();
+      } else {
+        response.json().then((data) => {
+          if (Object.hasOwn(data, "errors")) {
+            status.innerHTML = data["errors"]
+              .map((error) => error["message"])
+              .join(", ");
+          } else {
+            status.innerHTML = "Oops! There was a problem submitting your form";
+          }
+        });
+      }
+    })
+    .catch((error) => {
+      status.innerHTML = "Oops! There was a problem submitting your form";
+    });
+}
+form.addEventListener("submit", handleSubmit);
 async function Main() {
   await addMovie(725201, "The Gray Man", "Action", "movie");
   await addMovie(617653, "The Last Duel", "Action", "movie");
   await addMovie(550988, "Free Guy", "Comedy", "movie");
   await addMovie(836225, "The Exorcism of God", "Horror", "movie");
+  await addMovie(315635, "Spider-Man Homecoming", "Action", "movie");
+  await addMovie(634649, "Spider-Man No Way Home", "Action", "movie");
   await addMovie(361743, "Top Gun Maverick", "Action", "movie");
   await addMovie(238, "The Godfather", "Drama", "movie");
   await addMovie(524434, "Eternals", "Action", "movie");

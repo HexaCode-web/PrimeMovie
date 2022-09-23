@@ -71,7 +71,26 @@
           <li><button id="Year">Choose by year</button></li>
           <li><button id="series">series</button></li>
           <li><button id="movies">movies</button></li>
+          <li><button id="request">Request a movie</button></li>
           <div class="yearList inactive"><ul class="List"></ul></div>
+          <div id="Form" class="inactive">
+            <form
+              id="my-form"
+              action="https://formspree.io/f/mbjboggj"
+              method="POST"
+            >
+              <label>Email:</label>
+              <input type="email" name="email" placeholder="not required" />
+              <label>movie/Show:</label>
+              <input
+                type="text"
+                name="message"
+                placeholder="eg:Stranger Things"
+              />
+              <button class="stroke" id="my-form-button">Submit</button>
+              <p id="my-form-status"></p>
+            </form>
+          </div>
         </ul>
       </div>
       <div

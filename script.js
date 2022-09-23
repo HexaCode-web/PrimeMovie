@@ -230,4 +230,7 @@ window.addEventListener("scroll", () => {
   if (GenreList.classList.contains("active")) {
     GenreList.classList.toggle("active");
   }
+  if (Form.classList.contains("active")) {
+    Form.classList.toggle("active");
+  }
 });
