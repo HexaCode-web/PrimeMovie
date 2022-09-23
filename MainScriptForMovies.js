@@ -15,6 +15,10 @@ const MovieDuration = document.querySelector("#duration");
 const MovieLANG = document.querySelector("#language");
 const countries = document.querySelector("#countries");
 const buttonwrapper = document.querySelector(".button-wrapper");
+const recommended = document.createElement("div");
+recommended.classList.add("recommended");
+recommended.innerHTML = `<p>recommended server is :</p>`;
+recommended.innerHTML += `<img src="/images/recommendation.jpg">`;
 const movieDB = [];
 let clicks = 0;
 let data;
@@ -26,11 +30,7 @@ btnAR.addEventListener("click", () => {
 btnEN.addEventListener("click", () => {
   movieEN.classList.toggle("active");
   movieAR.classList.remove("active");
-  const recommended = document.createElement("div");
-  recommended.classList.add("recommended");
-  recommended.innerHTML = `<p>recommended server is :</p>`;
-  recommended.innerHTML += `<img src="/images/recommendation.jpg">`;
-  buttonwrapper.appendChild(recommended);
+  About.appendChild(recommended);
   window.scrollTo(0, 1000);
 });
 const addMovieinfo = async (ID) => {

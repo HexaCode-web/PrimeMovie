@@ -14,8 +14,6 @@ html {
 .main {
   align-items: center;
   display: flex;
-  width: 100%;
-  height: fit-content;
   flex-direction: column;
 }
 .active {
@@ -34,9 +32,7 @@ html {
           video
 ============================================== */
 iframe {
-  top: 950px;
-  position: absolute;
-  margin: 20px;
+  margin: 40px;
   min-height: 712px;
   width: 95%;
   display: none;
@@ -54,17 +50,20 @@ iframe {
           info
 ============================================== */
 .Info {
+  display: flex;
   margin-left: 5px;
   width: 95%;
   overflow-y: hidden;
-  height: 800px;
+  position: relative;
 }
 .background {
   z-index: 0;
   display: flex;
   position: absolute;
-  width: 95%;
-  height: 740px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  width: 100%;
   opacity: 0.1;
   background-image: url(share.png);
   background-repeat: no-repeat;
@@ -82,16 +81,13 @@ body::-webkit-scrollbar,
   font-family: "Roboto";
   text-align: center;
   color: goldenrod;
-  display: grid;
-  height: 700px;
+  display: flex;
+  gap: 20px;
   border: 1px solid cyan;
-  grid-template-columns: 40% 60%;
 }
 .content img {
   border-radius: 10px;
   width: 350px;
-  grid-area: img;
-  opacity: 1;
   height: 440px;
 }
 #title {
@@ -106,11 +102,9 @@ body::-webkit-scrollbar,
 #MoreInfo {
   word-wrap: break-word;
   z-index: 1;
-  position: absolute;
   padding: 10px;
   margin-top: 15px;
   text-align: left;
-  flex-direction: column;
   width: 100%;
   max-width: 800px;
   display: grid;
@@ -144,12 +138,13 @@ span {
   transition: 0.5s;
 }
 .button-wrapper {
-  position: absolute;
-  width: 40%;
+  flex-direction: column;
+  display: flex;
+  width: 350px;
   max-width: 600px;
 }
 .Watch {
-  max-width: 350px;
+  min-width: 350px;
   z-index: 1;
   margin-top: 20px;
   font-family: Ubuntu;
@@ -160,7 +155,6 @@ span {
   border: none;
   font-size: 2rem;
   height: 50px;
-  width: 60%;
 }
 .Watch:hover {
   transition: all 0.1s;
@@ -258,17 +252,19 @@ ul {
     font-size: 10px;
   }
   .Info {
-    overflow: visible;
-    padding: 20px;
-    height: 1000px;
+    display: flex;
+    margin-left: 5px;
+    width: 95%;
+    overflow-y: hidden;
+    position: relative;
   }
   .background {
     height: 950px;
   }
   .content {
     height: 900px;
-    grid-template-columns: none;
-    grid-template-rows: 510px 390px;
+    display: flex;
+    flex-direction: column;
   }
   .content h1 {
     margin-top: 50px;
@@ -299,10 +295,25 @@ ul {
     align-items: center;
   }
   #Genre {
-    max-width: 250px;
+    width: 50%;
+  }
+  #Date,
+  #duration,
+  #Genre,
+  #countries,
+  #language {
+    margin: 5px;
+  }
+  #countries {
+    width: 100%;
   }
   #MoreInfo {
+    gap: 20px;
+    flex-wrap: wrap;
+    display: flex;
     width: 100%;
+    grid-template-columns: none;
+    grid-template-rows: none;
   }
   iframe {
     margin: 0px;
@@ -312,20 +323,28 @@ ul {
 }
 @media (orientation: landscape) and (max-width: 1000px) {
   html {
-    font-size: 10px;
+    font-size: 13px;
   }
   .Info {
-    overflow: visible;
-    padding: 20px;
-    height: 1000px;
+    display: flex;
+    margin-left: 5px;
+    width: 95%;
+    overflow-y: hidden;
+    position: relative;
   }
   .background {
     height: 950px;
   }
-  .content {
-    height: 900px;
-    grid-template-columns: none;
-    grid-template-rows: 450px 450px;
+  .recommended {
+    max-width: 198px;
+    max-height: 37px;
+  }
+  .recommended img {
+    max-width: 198px;
+    max-height: 37px;
+  }
+  .recommended p {
+    font-size: 1.2rem;
   }
   .content h1 {
     margin-top: 50px;
@@ -344,11 +363,23 @@ ul {
     justify-content: center;
     align-items: center;
   }
-  #Genre {
-    max-width: 250px;
+  #Date,
+  #duration,
+  #Genre,
+  #countries,
+  #language {
+    margin: 5px;
+  }
+  #countries {
+    width: 100%;
   }
   #MoreInfo {
+    gap: 20px;
+    flex-wrap: wrap;
+    display: flex;
     width: 100%;
+    grid-template-columns: none;
+    grid-template-rows: none;
   }
   iframe {
     margin: 0px;
