@@ -5,9 +5,8 @@ const New4 = document.querySelector(".itemfour");
 const AddMovieRecent = (varible, movieNum, color = "white") => {
   // console.log(movieDB);
   //console.log(varible);
-  varible.style.backgroundImage = `url(${
-    apiPoster + movieDB[movieNum].backdrop_path
-  })`;
+  varible.style.backgroundImage = `url(${movieDB[movieNum].backdrop_path})`;
+  debugger;
   let varHeadLine = varible
     .querySelector(".container")
     .querySelector(".headline");
@@ -56,9 +55,12 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
+  await addMovie(725201, "The Gray Man", "Action", "movie");
   await addMovie(617653, "The Last Duel", "Action", "movie");
   await addMovie(550988, "Free Guy", "Comedy", "movie");
   await addMovie(836225, "The Exorcism of God", "Horror", "movie");
+  await addMovie(361743, "Top Gun Maverick", "Action", "movie");
+  await addMovie(238, "The Godfather", "Drama", "movie");
   await addMovie(524434, "Eternals", "Action", "movie");
   await addMovie(740925, "No One Gets Out Alive", "Horror", "movie");
   await addMovie(787723, "13 Minutes", "Action", "movie");

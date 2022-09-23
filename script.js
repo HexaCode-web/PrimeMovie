@@ -11,7 +11,8 @@ const Year = document.querySelector("#Year"); //order by year
 const series = document.querySelector("#series"); //show series only
 const movies = document.querySelector("#movies"); //show movies only
 const movieDB = []; //the whole database of the movie
-const apiPoster = "https://image.tmdb.org/t/p/original/"; //the api for poster add the id after it
+const apiPoster = "https://image.tmdb.org/t/p/w500/";
+const apibanner = "https://image.tmdb.org/t/p/original/"; //the api for poster add the id after it
 const years = [
   2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011,
 ]; //years that show in yearlist
@@ -189,7 +190,7 @@ const addMovie = async (ID, Path, genre, type) => {
     ID,
     Data.release_date,
     type,
-    apiPoster + Data.backdrop_path,
+    apibanner + Data.backdrop_path,
     Data.overview
   );
   movieDB.push(movieInfo);

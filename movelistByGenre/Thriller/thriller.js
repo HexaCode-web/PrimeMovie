@@ -32,6 +32,7 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
+  await addMovie(725201, "The Gray Man", "Thriller", "movie");
   await addMovie(740925, "No One Gets Out Alive", "Thriller", "movie");
   await addMovie(756999, "The Black Phone", "Thriller", "movie");
   await addMovie(760741, "Beast", "Thriller", "movie");

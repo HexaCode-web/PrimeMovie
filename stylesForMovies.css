@@ -101,7 +101,6 @@ body::-webkit-scrollbar,
 }
 #MoreInfo {
   word-wrap: break-word;
-  z-index: 1;
   padding: 10px;
   margin-top: 15px;
   text-align: left;
@@ -122,6 +121,8 @@ body::-webkit-scrollbar,
   font-size: 1.5rem;
 }
 #Genre {
+  display: flex;
+  z-index: 2;
   max-width: 300px;
   height: fit-content;
 }

@@ -83,13 +83,24 @@ a {
 #toolBar a:hover {
   color: goldenrod;
 }
-#toolBar .logo {
-  margin-left: 120px;
+.logo {
+  width: 150px;
+  height: 150px;
 }
 #toolBar h1 {
   font-size: 3rem;
+  animation: glow 2s ease-in-out infinite alternate;
 }
-
+@keyframes glow {
+  from {
+    text-shadow: 1px 2px 3px blue, 3px 2px 1px green, 2px 3px 5px pink,
+      4px 4px 3px brown;
+  }
+  to {
+    text-shadow: 1px 0px 4px green, 2px 2px 4px orange, 2px 4px 2px deeppink,
+      1px 3px 1px gray;
+  }
+}
 /* ====================================================  
         POPUPS
 ================================================== */
@@ -139,7 +150,7 @@ GenreList
 yearList
 ============= */
 .yearList {
-  z-index: 1;
+  z-index: 2;
   transform: translate(0, 100px);
   width: 400px;
   height: 200px;
@@ -441,8 +452,9 @@ yearList
     flex-wrap: wrap;
   }
   .logo {
-    width: 60px;
+    width: 50px;
   }
+
   .GenreList {
     width: 70px;
     gap: 7px;

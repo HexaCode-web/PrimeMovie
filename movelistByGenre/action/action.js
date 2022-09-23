@@ -32,6 +32,8 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
+  await addMovie(361743, "Top Gun Maverick", "Action", "movie");
+  await addMovie(725201, "The Gray Man", "Action", "movie");
   await addMovie(617653, "The Last Duel", "Action", "movie");
   await addMovie(524434, "Eternals", "Action", "movie");
   await addMovie(480042, "Escape Plan The Extractors", "Action", "movie");

@@ -18,7 +18,7 @@ const buttonwrapper = document.querySelector(".button-wrapper");
 const recommended = document.createElement("div");
 recommended.classList.add("recommended");
 recommended.innerHTML = `<p>recommended server is :</p>`;
-recommended.innerHTML += `<img src="/images/recommendation.jpg">`;
+recommended.innerHTML += `<img src="../../images/recommendation.jpg">`;
 const movieDB = [];
 let clicks = 0;
 let data;
