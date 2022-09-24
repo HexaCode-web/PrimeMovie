@@ -509,7 +509,8 @@ yearList
     flex-wrap: wrap;
   }
   .logo {
-    width: 60px;
+    width: 75px;
+    height: 75px;
   }
   .GenreList {
     width: 70px;
