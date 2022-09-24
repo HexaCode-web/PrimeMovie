@@ -32,6 +32,8 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
+  await addMovie(505026, "Death on the Nile", "Drama", "movie");
+  await addMovie(315635, "Spider-Man Homecoming", "Action", "movie");
   await addMovie(238, "The Godfather", "Drama", "movie");
   await addMovie(361743, "Top Gun Maverick", "Action", "movie");
   await addMovie(617653, "The Last Duel", "Drama", "movie");

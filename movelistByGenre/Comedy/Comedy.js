@@ -32,6 +32,7 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
+  await addMovie(629542, "The Bad Guys", "Animations", "movie");
   await addMovie(550988, "Free Guy", "Comedy", "movie");
   await addMovie(1006851, "Office Invasion", "Comedy", "movie");
   await addShow(59186, "Impractical Jokers", "Comedy", "tv");

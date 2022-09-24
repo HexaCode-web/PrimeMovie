@@ -15,8 +15,8 @@ FormBtn.addEventListener("onclick", () => {
 const AddMovieRecent = (
   varible,
   movieNum,
-  color = "white",
-  path = movieDB[movieNum].Name
+  path = movieDB[movieNum].Name,
+  color = "white"
 ) => {
   // console.log(movieDB);
   //console.log(varible);
@@ -104,6 +104,20 @@ async function handleSubmit(event) {
 form.addEventListener("submit", handleSubmit);
 async function Main() {
   await addMovie(
+    338952,
+    "Fantastic Beasts The Crimes of Grindelwald",
+    "Action",
+    "movie"
+  );
+  await addMovie(
+    338953,
+    "Fantastic Beasts The Secrets of Dumbledore",
+    "Action",
+    "movie"
+  );
+  await addMovie(505026, "Death on the Nile", "Drama", "movie");
+  await addMovie(629542, "The Bad Guys", "Animations", "movie");
+  await addMovie(
     324857,
     "Spider-Man Into the Spider-Verse",
     "Animation",
@@ -142,9 +156,9 @@ async function Main() {
   await addMovie(762504, "Nope", "horror", "movie");
   await addMovie(913814, "Brian and Charles", "Comedy", "movie");
   await addMovie(107846, "Escape Plan", "Action", "movie");
-  AddMovieRecent(New1, 0, "white", "Spider-Man Into the Spider-Verse");
-  AddMovieRecent(New2, 1, "white", "Spider-Man Homecoming");
-  AddMovieRecent(New3, 2, "white", "Spider-Man No Way Home");
-  AddMovieRecent(New4, 3, "white");
+  AddMovieRecent(New1, 0, "Fantastic Beasts The Crimes of Grindelwald");
+  AddMovieRecent(New2, 1, "Fantastic Beasts The Secrets of Dumbledore");
+  AddMovieRecent(New3, 2);
+  AddMovieRecent(New4, 3);
 }
 Main();

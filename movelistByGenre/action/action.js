@@ -32,7 +32,22 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
+  await addMovie(
+    338952,
+    "Fantastic Beasts The Crimes of Grindelwald",
+    "Action",
+    "movie"
+  );
+  await addMovie(
+    338953,
+    "Fantastic Beasts The Secrets of Dumbledore",
+    "Action",
+    "movie"
+  );
+  await addMovie(324857, "Spider-Man Into the Spider-Verse", "Action", "movie");
+  await addMovie(315635, "Spider-Man Homecoming", "Action", "movie");
   await addMovie(361743, "Top Gun Maverick", "Action", "movie");
+  await addMovie(634649, "Spider-Man No Way Home", "Action", "movie");
   await addMovie(725201, "The Gray Man", "Action", "movie");
   await addMovie(617653, "The Last Duel", "Action", "movie");
   await addMovie(524434, "Eternals", "Action", "movie");

@@ -32,6 +32,13 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
+  await addMovie(629542, "The Bad Guys", "Animations", "movie");
+  await addMovie(
+    324857,
+    "Spider-Man Into the Spider-Verse",
+    "Animation",
+    "movie"
+  );
   await addMovie(508947, "Turning Red", "animation", "movie");
   await addMovie(776305, "Belle", "animation", "movie");
 }
