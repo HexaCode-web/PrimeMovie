@@ -249,7 +249,6 @@ ul {
     font-size: 10px;
   }
   .Info {
-    height: 1000px;
     display: flex;
     margin-left: 5px;
     width: 95%;
@@ -257,10 +256,9 @@ ul {
     position: relative;
   }
   .background {
-    height: 950px;
+    height: 100%;
   }
   .content {
-    height: 900px;
     display: flex;
     flex-direction: column;
   }
