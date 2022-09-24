@@ -12,7 +12,12 @@ request.addEventListener("click", () => {
 FormBtn.addEventListener("onclick", () => {
   Form.classList.toggle("active");
 });
-const AddMovieRecent = (varible, movieNum, color = "white") => {
+const AddMovieRecent = (
+  varible,
+  movieNum,
+  color = "white",
+  path = movieDB[movieNum].Name
+) => {
   // console.log(movieDB);
   //console.log(varible);
   varible.style.backgroundImage = `url(${movieDB[movieNum].backdrop_path})`;
@@ -23,7 +28,7 @@ const AddMovieRecent = (varible, movieNum, color = "white") => {
     .querySelector(".container")
     .querySelector(".overview");
   VarOverView.style.color = color;
-  varHeadLine.innerHTML = `<a href="movieList/${movieDB[movieNum].Name}/${movieDB[movieNum].Name}.html">${movieDB[movieNum].Name}</a>`;
+  varHeadLine.innerHTML = `<a href="movieList/${path}/${path}.html">${path}</a>`;
   VarOverView.innerHTML = movieDB[movieNum].overview;
 };
 const UpdateUI = (
@@ -98,12 +103,18 @@ async function handleSubmit(event) {
 }
 form.addEventListener("submit", handleSubmit);
 async function Main() {
+  await addMovie(
+    324857,
+    "Spider-Man Into the Spider-Verse",
+    "Animation",
+    "movie"
+  );
+  await addMovie(315635, "Spider-Man Homecoming", "Action", "movie");
+  await addMovie(634649, "Spider-Man No Way Home", "Action", "movie");
   await addMovie(725201, "The Gray Man", "Action", "movie");
   await addMovie(617653, "The Last Duel", "Action", "movie");
   await addMovie(550988, "Free Guy", "Comedy", "movie");
   await addMovie(836225, "The Exorcism of God", "Horror", "movie");
-  await addMovie(315635, "Spider-Man Homecoming", "Action", "movie");
-  await addMovie(634649, "Spider-Man No Way Home", "Action", "movie");
   await addMovie(361743, "Top Gun Maverick", "Action", "movie");
   await addMovie(238, "The Godfather", "Drama", "movie");
   await addMovie(524434, "Eternals", "Action", "movie");
@@ -131,9 +142,9 @@ async function Main() {
   await addMovie(762504, "Nope", "horror", "movie");
   await addMovie(913814, "Brian and Charles", "Comedy", "movie");
   await addMovie(107846, "Escape Plan", "Action", "movie");
-  AddMovieRecent(New1, 0);
-  AddMovieRecent(New2, 1);
-  AddMovieRecent(New3, 2);
+  AddMovieRecent(New1, 0, "white", "Spider-Man Into the Spider-Verse");
+  AddMovieRecent(New2, 1, "white", "Spider-Man Homecoming");
+  AddMovieRecent(New3, 2, "white", "Spider-Man No Way Home");
   AddMovieRecent(New4, 3, "white");
 }
 Main();

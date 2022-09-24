@@ -113,11 +113,11 @@ body::-webkit-scrollbar,
 #Genre {
   max-width: 300px;
   height: fit-content;
-  /* display: flex;
+  display: flex;
   flex-wrap: wrap;
   z-index: 2;
   max-width: 300px;
-  height: fit-content; */
+  height: fit-content;
 }
 span {
   color: rgb(196, 187, 187);
