@@ -403,7 +403,7 @@ yearList
 .movies {
   /* movielist */
   overflow: hidden;
-  gap: 40px;
+  gap: 30px;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -418,7 +418,7 @@ yearList
   color: goldenrod;
   padding: 2px;
   width: 200px;
-  height: 420px;
+  height: 440px;
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -442,6 +442,7 @@ yearList
   }
 }
 .movies .movieCard:hover {
+  width: 210px;
   padding-bottom: 5px;
   margin: 10px;
   border: 1px solid cyan;
@@ -463,7 +464,7 @@ yearList
 }
 .movies a:hover {
   color: cyan;
-  scale: 1.3;
+  scale: 1.2;
   transition: all 0.1s;
 }
 .movies button {
@@ -486,7 +487,7 @@ yearList
 }
 .movies button a:hover {
   color: white;
-  scale: 1.3;
+  scale: 1;
   transition: all 0.1s;
 }
 
