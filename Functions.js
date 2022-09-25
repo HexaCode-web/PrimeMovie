@@ -6,22 +6,28 @@ const request = document.querySelector("#request");
 const Form = document.querySelector("#Form");
 const form = document.querySelector("#my-form");
 const FormBtn = document.querySelector("#my-form-button");
+
 const signUpBTN = document.querySelector("#signUpBTN");
 const signupForm = document.querySelector(".signUp-form");
 const saveSignUp = document.querySelector("#Save-signup");
 const cancelSignUp = document.querySelector("#Cancel-signup");
+const signupInfo = document.querySelector("#infoSignUp");
+
 const signinBTN = document.querySelector("#signinBTN");
 const signinForm = document.querySelector(".signIn-form");
 const saveSignin = document.querySelector("#Save-signin");
 const cancelSignin = document.querySelector("#Cancel-signin");
+const signinInfo = document.querySelector("#infoSignin");
+
 const username = document.querySelector("#id");
 const signinUserName = document.querySelector("#id-signin");
 const password = document.querySelector("#password");
 const signinpassword = document.querySelector("#password-signin");
 const logoutBTN = document.querySelector("#logoutBTN");
+
 let loggedin = JSON.parse(localStorage.getItem("loggedin"));
 let newUser = {};
-let userlist = [];
+let userlist = [{}];
 if (loggedin) {
   signinBTN.style.display = "none";
   signUpBTN.style.display = "none";
@@ -45,27 +51,29 @@ signinBTN.addEventListener("click", () => {
   signinUserName.value = "";
   signinpassword.value = "";
 });
+
 saveSignUp.addEventListener("click", () => {
   let duplicate = false;
   let olduser = JSON.parse(localStorage.getItem("userlist"));
   if (username.value === "" || password.value === "") {
-    alert("username or password cant be left empty");
+    signupInfo.innerHTML = "username or password cant be left empty";
   }
   newUser = {
     username: username.value,
     password: password.value,
   };
-  olduser.forEach((element) => {
-    if (element.username === newUser.username) {
-      duplicate = true;
-      alert("username is taken");
-    }
-  });
+  if (!(olduser === null))
+    olduser.forEach((element) => {
+      if (element.username === newUser.username) {
+        duplicate = true;
+        signupInfo.innerHTML = "username is taken";
+      }
+    });
   if (duplicate === false) {
     userlist.push(newUser);
     window.localStorage.setItem("userlist", JSON.stringify(userlist));
-    alert("signed up successfully");
-    signupForm.classList.toggle("active");
+    signupInfo.innerHTML = "signed up successfully";
+    // signupForm.classList.toggle("active");
   }
 });
 saveSignin.addEventListener("click", () => {
@@ -80,7 +88,7 @@ saveSignin.addEventListener("click", () => {
       element.username === checkUser.username &&
       element.password === checkUser.password
     ) {
-      alert("logged in");
+      signinInfo.innerHTML = "logged in";
       loggedin = true;
       window.localStorage.setItem("loggedin", JSON.stringify(loggedin));
       checked = true;
@@ -89,7 +97,7 @@ saveSignin.addEventListener("click", () => {
     }
   });
   if (checked === false) {
-    alert("invaild info");
+    signinInfo.innerHTML = "invaild info";
   }
 });
 cancelSignUp.addEventListener("click", () => {
