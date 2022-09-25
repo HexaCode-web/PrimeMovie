@@ -16,7 +16,6 @@ const MovieLANG = document.querySelector("#language");
 const countries = document.querySelector("#countries");
 const buttonwrapper = document.querySelector(".button-wrapper");
 const recommended = document.createElement("div");
-
 const movieDB = [];
 let clicks = 0;
 let data;

@@ -50,6 +50,11 @@
       <div id="toolBar">
         <h1><a href="/index.html">PrimeMovie</a></h1>
         <img class="logo" src="images/logo.png" />
+        <ul>
+          <li><button id="signUpBTN">signUp</button></li>
+          <li><button id="signinBTN">signIn</button></li>
+          <li><button id="logoutBTN" style="display: none">logout</button></li>
+        </ul>
       </div>
       <div class="filters">
         <ul>
@@ -87,9 +92,53 @@
                 name="message"
                 placeholder="eg:Stranger Things"
               />
-              <button class="stroke" id="my-form-button">Submit</button>
+              <button class="stroke" id="my-form-button">send</button>
               <p id="my-form-status"></p>
             </form>
+          </div>
+          <div class="signUp-form inactive">
+            <h2>sign up</h2>
+            <div>
+              <label for="id">username:</label>
+              <input
+                type="text"
+                id="id"
+                required
+                autofocus
+                placeholder="your username"
+              />
+              <label for="password">password</label>
+              <input
+                type="password"
+                id="password"
+                required
+                placeholder="your password"
+              />
+              <button id="Save-signup">sign up</button>
+              <button id="Cancel-signup">Cancel</button>
+            </div>
+          </div>
+          <div class="signIn-form inactive">
+            <h2>sign in</h2>
+            <div>
+              <label for="id-signin">username:</label>
+              <input
+                type="text"
+                id="id-signin"
+                required
+                autofocus
+                placeholder="your username"
+              />
+              <label for="password-signin">password</label>
+              <input
+                type="password"
+                id="password-signin"
+                required
+                placeholder="your password"
+              />
+              <button id="Save-signin">login</button>
+              <button id="Cancel-signin">Cancel</button>
+            </div>
           </div>
         </ul>
       </div>

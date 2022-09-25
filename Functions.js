@@ -4,13 +4,99 @@ const New3 = document.querySelector(".itemthree");
 const New4 = document.querySelector(".itemfour");
 const request = document.querySelector("#request");
 const Form = document.querySelector("#Form");
+const form = document.querySelector("#my-form");
 const FormBtn = document.querySelector("#my-form-button");
-request.addEventListener("click", () => {
-  console.log("hi");
-  Form.classList.toggle("active");
+const signUpBTN = document.querySelector("#signUpBTN");
+const signupForm = document.querySelector(".signUp-form");
+const saveSignUp = document.querySelector("#Save-signup");
+const cancelSignUp = document.querySelector("#Cancel-signup");
+const signinBTN = document.querySelector("#signinBTN");
+const signinForm = document.querySelector(".signIn-form");
+const saveSignin = document.querySelector("#Save-signin");
+const cancelSignin = document.querySelector("#Cancel-signin");
+const username = document.querySelector("#id");
+const signinUserName = document.querySelector("#id-signin");
+const password = document.querySelector("#password");
+const signinpassword = document.querySelector("#password-signin");
+const logoutBTN = document.querySelector("#logoutBTN");
+let loggedin = JSON.parse(localStorage.getItem("loggedin"));
+let newUser = {};
+let userlist = [];
+if (loggedin) {
+  signinBTN.style.display = "none";
+  signUpBTN.style.display = "none";
+  logoutBTN.style.display = "inline";
+}
+logoutBTN.addEventListener("click", () => {
+  loggedin = false;
+  localStorage.setItem("loggedin", loggedin);
+  localStorage.setItem("currentUser", "{}");
+  location.reload();
 });
-FormBtn.addEventListener("onclick", () => {
-  Form.classList.toggle("active");
+signUpBTN.addEventListener("click", () => {
+  signupForm.classList.toggle("active");
+  signinForm.classList.remove("active");
+  username.value = "";
+  password.value = "";
+});
+signinBTN.addEventListener("click", () => {
+  signinForm.classList.toggle("active");
+  signupForm.classList.remove("active");
+  signinUserName.value = "";
+  signinpassword.value = "";
+});
+saveSignUp.addEventListener("click", () => {
+  let duplicate = false;
+  let olduser = JSON.parse(localStorage.getItem("userlist"));
+  if (username.value === "" || password.value === "") {
+    alert("username or password cant be left empty");
+  }
+  newUser = {
+    username: username.value,
+    password: password.value,
+  };
+  olduser.forEach((element) => {
+    if (element.username === newUser.username) {
+      duplicate = true;
+      alert("username is taken");
+    }
+  });
+  if (duplicate === false) {
+    userlist.push(newUser);
+    window.localStorage.setItem("userlist", JSON.stringify(userlist));
+    alert("signed up successfully");
+    signupForm.classList.toggle("active");
+  }
+});
+saveSignin.addEventListener("click", () => {
+  checkUser = {
+    username: signinUserName.value,
+    password: signinpassword.value,
+  };
+  let olduser = JSON.parse(localStorage.getItem("userlist"));
+  let checked = false;
+  olduser.forEach((element) => {
+    if (
+      element.username === checkUser.username &&
+      element.password === checkUser.password
+    ) {
+      alert("logged in");
+      loggedin = true;
+      window.localStorage.setItem("loggedin", JSON.stringify(loggedin));
+      checked = true;
+      window.localStorage.setItem("currentUser", JSON.stringify(checkUser));
+      location.reload();
+    }
+  });
+  if (checked === false) {
+    alert("invaild info");
+  }
+});
+cancelSignUp.addEventListener("click", () => {
+  signupForm.classList.toggle("active");
+});
+cancelSignin.addEventListener("click", () => {
+  signinForm.classList.toggle("active");
 });
 const AddMovieRecent = (
   varible,
@@ -18,8 +104,6 @@ const AddMovieRecent = (
   path = movieDB[movieNum].Name,
   color = "white"
 ) => {
-  // console.log(movieDB);
-  //console.log(varible);
   varible.style.backgroundImage = `url(${movieDB[movieNum].backdrop_path})`;
   let varHeadLine = varible
     .querySelector(".container")
@@ -68,8 +152,12 @@ const UpdateUI = (
   movieInfo.overview = overview;
   return movieInfo;
 };
-var form = document.getElementById("my-form");
-
+FormBtn.addEventListener("click", () => {
+  Form.classList.toggle("active");
+});
+request.addEventListener("click", () => {
+  Form.classList.toggle("active");
+});
 async function handleSubmit(event) {
   event.preventDefault();
   var status = document.getElementById("my-form-status");
