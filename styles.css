@@ -559,7 +559,8 @@ button:focus {
   #Form,
   .signUp-form,
   .signIn-form {
-    width: 200px;
+    top: 10px;
+    width: 300px;
   }
   #my-form-button,
   .signUp-form button,
