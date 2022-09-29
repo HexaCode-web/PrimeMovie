@@ -5,7 +5,7 @@ html,
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 1700px;
+  height: 1900px;
   background-color: #1e2129;
 }
 html {
@@ -32,7 +32,7 @@ html {
           video
 ============================================== */
 iframe {
-  margin: 40px;
+  margin-top: 20px;
   min-height: 712px;
   width: 95%;
   display: none;
@@ -258,9 +258,6 @@ ul {
     1px 1px 0 #000;
 }
 @media (max-width: 850px) {
-  iframe {
-    max-width: 95%;
-  }
   html {
     font-size: 10px;
   }
@@ -271,6 +268,10 @@ ul {
     overflow: visible;
     position: relative;
   }
+  iframe {
+    max-width: 95%;
+    overflow: hidden;
+  }
   .background {
     height: 100%;
   }
@@ -278,13 +279,13 @@ ul {
     display: flex;
     flex-direction: column;
   }
-  .content h1 {
-    margin-top: 50px;
-    font-size: 3rem;
-  }
   .content img {
     width: 250px;
     height: 340px;
+  }
+  .content h1 {
+    margin-top: 50px;
+    font-size: 3rem;
   }
   .button-wrapper {
     position: static;
