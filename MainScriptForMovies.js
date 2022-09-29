@@ -15,10 +15,34 @@ const MovieDuration = document.querySelector("#duration");
 const MovieLANG = document.querySelector("#language");
 const countries = document.querySelector("#countries");
 const buttonwrapper = document.querySelector(".button-wrapper");
+const FavBtn = document.querySelector("#Add");
+const LaterBtn = document.querySelector("#Later");
 const recommended = document.createElement("div");
 const movieDB = [];
 let clicks = 0;
 let data;
+if (!JSON.parse(localStorage.getItem("loggedin"))) {
+  LaterBtn.classList.add("disabled");
+  FavBtn.classList.add("disabled");
+}
+LaterBtn.addEventListener("click", () => {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  if (currentUser.watchLater.includes(MovieTitle.innerText)) {
+    console.log("already added");
+  } else {
+    currentUser.watchLater.push(MovieTitle.innerText);
+  }
+  localStorage.setItem("currentUser", JSON.stringify(currentUser));
+});
+FavBtn.addEventListener("click", () => {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  if (currentUser.favMovies.includes(MovieTitle.innerText)) {
+    console.log("already added");
+  } else {
+    currentUser.favMovies.push(MovieTitle.innerText);
+  }
+  localStorage.setItem("currentUser", JSON.stringify(currentUser));
+});
 btnAR.addEventListener("click", () => {
   movieAR.classList.toggle("active");
   movieEN.classList.remove("active");

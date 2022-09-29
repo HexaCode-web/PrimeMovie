@@ -60,6 +60,36 @@ a {
   transition: all 0.5s;
 }
 /* ====================================================  
+        Profile
+================================================== */
+.Profile h2 {
+  color: goldenrod;
+}
+.Profile .Add {
+  margin: 10px;
+  position: relative;
+  width: 200px;
+  min-width: 200px;
+  z-index: 2;
+  font-family: Ubuntu;
+  background-color: #00acc1;
+  color: white;
+  border-radius: 100px;
+  border: none;
+  font-size: 1.5rem;
+  height: 50px;
+}
+
+.Profile .Add:hover {
+  transition: all 0.1s;
+  scale: 1.1;
+}
+
+.Profile .Add:active {
+  transition: all 0.1s;
+  scale: 0.9;
+}
+/* ====================================================  
         Main pAge
 ================================================== */
 .main {
@@ -77,27 +107,30 @@ a {
   width: 95%;
   display: flex;
   color: goldenrod;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 #toolBar a:hover {
   color: goldenrod;
 }
-.logo {
-  width: 150px;
-  height: 150px;
-}
 #toolBar h1 {
+  text-align: center;
+  width: 100%;
   font-size: 3rem;
   animation: glow 2s ease-in-out infinite alternate;
 }
 #toolBar button {
-  margin-left: 30px;
   cursor: pointer;
   font-size: 1.5rem;
   border: none;
   color: goldenrod;
   background-color: transparent;
+}
+#toolBar .Account {
+  padding: 0;
+  justify-content: center;
+  display: flex;
 }
 @keyframes glow {
   from {

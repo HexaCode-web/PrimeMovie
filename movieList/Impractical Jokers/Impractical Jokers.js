@@ -15,6 +15,8 @@ const countries = document.querySelector("#countries");
 const season = document.querySelector(".Season");
 const eplist = document.querySelector(".epLIST");
 const WatchingNow = document.querySelector(".info");
+const focuss = document.createElement("div");
+focuss.classList.add("focused");
 const movieDB = [];
 const apiPoster = "https://image.tmdb.org/t/p/w500/";
 let clicks = 0;
@@ -196,7 +198,7 @@ const PrintSeason = async () => {
   SeasonData.episodes.pop();
   SeasonData.episodes.pop();
   SeasonData.episodes.forEach((element) => {
-    eplist.innerHTML += `<li><button onclick="ShowEpisode(${element.episode_number})">${element.episode_number}</button></li>`;
+    eplist.innerHTML += `<li><button id="${element.episode_number}" onclick="ShowEpisode(${element.episode_number})">${element.episode_number}</button></li>`;
   });
 };
 const ShowEpisode = (num) => {
@@ -205,5 +207,7 @@ const ShowEpisode = (num) => {
   WatchingNow.innerHTML = SeasonData.episodes[num - 1].name;
   movieAR.classList.add("active");
   movieAR.src = DataBase[num];
+  let selected = document.getElementById(`${num}`);
+  selected.appendChild(focuss);
 };
 addMovieinfo(59186);

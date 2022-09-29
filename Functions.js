@@ -24,18 +24,37 @@ const signinUserName = document.querySelector("#id-signin");
 const password = document.querySelector("#password");
 const signinpassword = document.querySelector("#password-signin");
 const logoutBTN = document.querySelector("#logoutBTN");
-
+const ProfileBtn = document.querySelector("#Profile");
 let loggedin = JSON.parse(localStorage.getItem("loggedin"));
 let newUser = {};
-let userlist = [{}];
 if (loggedin) {
   signinBTN.style.display = "none";
   signUpBTN.style.display = "none";
   logoutBTN.style.display = "inline";
+  Profile.style.display = "inline";
 }
 logoutBTN.addEventListener("click", () => {
   loggedin = false;
   localStorage.setItem("loggedin", loggedin);
+  let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  let userlist = JSON.parse(localStorage.getItem("userlist"));
+  userlist.forEach((user) => {
+    if (user.username === currentUser.username) {
+      currentUser.favMovies.forEach((e) => {
+        let location = currentUser.favMovies.indexOf(e);
+        if (e !== user.favMovies[location]) {
+          user.favMovies.push(e);
+        }
+      });
+      currentUser.watchLater.forEach((e) => {
+        let location = currentUser.watchLater.indexOf(e);
+        if (e !== user.watchLater[location]) {
+          user.watchLater.push(e);
+        }
+      });
+      localStorage.setItem("userlist", JSON.stringify(userlist));
+    }
+  });
   localStorage.setItem("currentUser", "{}");
   location.reload();
 });
@@ -54,6 +73,11 @@ signinBTN.addEventListener("click", () => {
 
 saveSignUp.addEventListener("click", () => {
   let duplicate = false;
+  if (!JSON.parse(localStorage.getItem("userlist"))) {
+    let userlist = [];
+    userlist.push({});
+    localStorage.setItem("userlist", JSON.stringify(userlist));
+  }
   let olduser = JSON.parse(localStorage.getItem("userlist"));
   if (username.value === "" || password.value === "") {
     signupInfo.innerHTML = "username or password cant be left empty";
@@ -61,6 +85,8 @@ saveSignUp.addEventListener("click", () => {
   newUser = {
     username: username.value,
     password: password.value,
+    favMovies: [],
+    watchLater: [],
   };
   if (!(olduser === null))
     olduser.forEach((element) => {
@@ -69,17 +95,18 @@ saveSignUp.addEventListener("click", () => {
         signupInfo.innerHTML = "username is taken";
       }
     });
-  if (duplicate === false) {
-    userlist.push(newUser);
-    window.localStorage.setItem("userlist", JSON.stringify(userlist));
+  if (!duplicate) {
+    olduser.push(newUser);
+    window.localStorage.setItem("userlist", JSON.stringify(olduser));
     signupInfo.innerHTML = "signed up successfully";
-    // signupForm.classList.toggle("active");
   }
 });
 saveSignin.addEventListener("click", () => {
   checkUser = {
     username: signinUserName.value,
     password: signinpassword.value,
+    favMovies: [],
+    watchLater: [],
   };
   let olduser = JSON.parse(localStorage.getItem("userlist"));
   let checked = false;
@@ -92,7 +119,7 @@ saveSignin.addEventListener("click", () => {
       loggedin = true;
       window.localStorage.setItem("loggedin", JSON.stringify(loggedin));
       checked = true;
-      window.localStorage.setItem("currentUser", JSON.stringify(checkUser));
+      window.localStorage.setItem("currentUser", JSON.stringify(element));
       location.reload();
     }
   });

@@ -137,6 +137,20 @@ span {
   width: 350px;
   max-width: 600px;
 }
+.Add {
+  margin: 10px;
+  position: relative;
+  width: 200px;
+  min-width: 200px;
+  z-index: 2;
+  font-family: Ubuntu;
+  background-color: #00acc1;
+  color: white;
+  border-radius: 100px;
+  border: none;
+  font-size: 1.5rem;
+  height: 50px;
+}
 .Watch {
   min-width: 350px;
   z-index: 1;
@@ -150,11 +164,13 @@ span {
   font-size: 2rem;
   height: 50px;
 }
-.Watch:hover {
+.Watch:hover,
+.Add:hover {
   transition: all 0.1s;
   scale: 1.1;
 }
-.Watch:active {
+.Watch:active,
+.Add:active {
   transition: all 0.1s;
   scale: 0.9;
 }

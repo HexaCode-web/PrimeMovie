@@ -196,6 +196,7 @@ const addMovie = async (ID, Path, genre, type) => {
     Data.overview
   );
   movieDB.push(movieInfo);
+  localStorage.setItem("movieDB", JSON.stringify(movieDB));
 };
 const addShow = async (ID, Path, genre, type) => {
   const Data = await GetRate(ID, type);

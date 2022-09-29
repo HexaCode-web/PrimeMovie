@@ -150,7 +150,14 @@ span {
   font-size: 2rem;
   height: 50px;
 }
-
+/* .focused {
+  position: relative;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+} */
 .Watch:hover,
 .buttons button:hover {
   transition: all 0.1s;
@@ -170,7 +177,8 @@ span {
 .buttons li {
   list-style: none;
 }
-.buttons button {
+.buttons button,
+.focused {
   min-width: 110px;
   height: 50px;
   font-size: 1.3rem;
@@ -179,6 +187,10 @@ span {
   font-family: Ubuntu;
   background-color: #00acc1;
   color: white;
+}
+.focused {
+  min-width: 120px;
+  background-color: transparent;
 }
 .disabled {
   background-color: grey;
