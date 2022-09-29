@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Impractical Jokerss9</title>
+    <title>The Twilight Saga Eclipse</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,9 +20,10 @@
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="../../stylesForShows.css"
+      href="../../stylesForMovies.css"
     />
-    <script src="Impractical Jokers.js" defer></script>
+    <script src="../../MainScriptForMovies.js" defer></script>
+    <script src="The Twilight Saga Eclipse.js" defer></script>
   </head>
   <body>
     <main class="main">
@@ -32,15 +33,17 @@
       <div class="Info">
         <div class="background"></div>
         <div class="content">
-          <div class="Left">
+          <div>
             <img id="poster" />
             <div class="button-wrapper">
               <button class="Watch" id="WatchAR">Watch In Arabic</button>
-              <!-- <button class="Watch" id="WatchEN">Watch In English!</button> -->
+              <button class="Watch" id="WatchEN">Watch In English!</button>
             </div>
           </div>
-          <div class="Right">
-            <div class="stroke" id="title"><h1></h1></div>
+          <div>
+            <div class="stroke" id="title">
+              <h1></h1>
+            </div>
             <div id="MovieInfo"></div>
             <div id="MoreInfo">
               <p id="Date"></p>
@@ -54,19 +57,44 @@
           </div>
         </div>
       </div>
-      <ul class="buttons Season"></ul>
-      <ul class="buttons epLIST"></ul>
-      <div class="info"></div>
       <iframe
         sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"
         class="MovieAR"
-        src="#"
+        src="https://m.reviewtech.me/embed-smd5y7ndxqkl.html"
         frameborder="0"
         scrolling="NO"
         width="1000"
         height="712"
-        allowfullscreen=""
+        allowfullscreen="true"
       ></iframe>
+      <iframe
+        class="MovieEN"
+        sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"
+        src="https://viload.org/watch?v=gAAAAABjNZmzXbFDHVGSD6Pnd_Xo1H1nyBfx921E57mxdEunT66OFFel8aNbZYS_1s9yp9HorQBfzP0Og624YfciDviBi02JKAMEVqqwUwqFoC3YpWaT5Ue6F98oQTavWtStwoQ4tstkNIyv4bT-1EkjzcFKlBk98Q=="
+        frameborder="0"
+        height="700"
+        width="1000"
+        scrolling="NO"
+        allowfullscreen="true"
+      ></iframe>
+      <div class="Other">
+        <ul class="movies">
+          <template id="sample">
+            <li>
+              <div class="movieCard">
+                <div class="Poster moviepic"></div>
+                <div>
+                  <img class="Star" />
+                  <span id="rating"></span>
+                </div>
+                <span class="genre"></span>
+                <div id="link"></div>
+                <button id="Watch">Watch now!</button>
+              </div>
+            </li>
+          </template>
+        </ul>
+      </div>
     </main>
   </body>
 </html>

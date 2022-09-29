@@ -226,6 +226,7 @@ async function handleSubmit(event) {
 }
 form.addEventListener("submit", handleSubmit);
 async function Main() {
+  await addMovie(24021, "The Twilight Saga Eclipse", "Advanture", "movie");
   await addMovie(
     338952,
     "Fantastic Beasts The Crimes of Grindelwald",
@@ -279,9 +280,9 @@ async function Main() {
   await addMovie(762504, "Nope", "horror", "movie");
   await addMovie(913814, "Brian and Charles", "Comedy", "movie");
   await addMovie(107846, "Escape Plan", "Action", "movie");
-  AddMovieRecent(New1, 0, "Fantastic Beasts The Crimes of Grindelwald");
-  AddMovieRecent(New2, 1, "Fantastic Beasts The Secrets of Dumbledore");
-  AddMovieRecent(New3, 2);
+  AddMovieRecent(New1, 0, "The Twilight Saga Eclipse");
+  AddMovieRecent(New2, 1, "Fantastic Beasts The Crimes of Grindelwald");
+  AddMovieRecent(New3, 2, "Fantastic Beasts The Secrets of Dumbledore");
   AddMovieRecent(New4, 3);
 }
 Main();

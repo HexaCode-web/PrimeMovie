@@ -32,6 +32,7 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
+  await addMovie(24021, "The Twilight Saga Eclipse", "Advanture", "movie");
   await addMovie(505026, "Death on the Nile", "Drama", "movie");
   await addMovie(315635, "Spider-Man Homecoming", "Action", "movie");
   await addMovie(238, "The Godfather", "Drama", "movie");

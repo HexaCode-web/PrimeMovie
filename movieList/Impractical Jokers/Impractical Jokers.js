@@ -21,6 +21,9 @@ const movieDB = [];
 const apiPoster = "https://image.tmdb.org/t/p/w500/";
 let clicks = 0;
 let Data;
+const FavBtn = document.querySelector("#Add");
+const LaterBtn = document.querySelector("#Later");
+const recommended = document.createElement("div");
 let SeasonData;
 let s9DB = [
   "0",
@@ -70,6 +73,28 @@ btnAR.addEventListener("click", () => {
 //   movieAR.classList.remove("active");
 //   window.scrollTo(0, 1000);
 // });
+if (!JSON.parse(localStorage.getItem("loggedin"))) {
+  LaterBtn.classList.add("disabled");
+  FavBtn.classList.add("disabled");
+}
+LaterBtn.addEventListener("click", () => {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  if (currentUser.watchLater.includes(MovieTitle.innerText)) {
+    console.log("already added");
+  } else {
+    currentUser.watchLater.push(MovieTitle.innerText);
+  }
+  localStorage.setItem("currentUser", JSON.stringify(currentUser));
+});
+FavBtn.addEventListener("click", () => {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  if (currentUser.favMovies.includes(MovieTitle.innerText)) {
+    console.log("already added");
+  } else {
+    currentUser.favMovies.push(MovieTitle.innerText);
+  }
+  localStorage.setItem("currentUser", JSON.stringify(currentUser));
+});
 const addMovieinfo = async (ID, img) => {
   const Data = await GetRate(ID);
   DefineMovie(Data, img);
