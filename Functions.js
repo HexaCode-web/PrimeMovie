@@ -260,7 +260,7 @@ async function Main() {
   await addMovie(756999, "The Black Phone", "Horror", "movie");
   await addMovie(758724, "The Cellar", "Horror", "movie");
   await addMovie(1006851, "Office Invasion", "Comedy", "movie");
-  // await addShow(66732, "Stranger Things", "Drama", "tv");
+  await addShow(66732, "Stranger Things", "Drama", "tv");
   await addShow(59186, "Impractical Jokers", "Comedy", "tv");
   await addMovie(773975, "End of the Road", "Thriller", "movie");
   await addMovie(807356, "Watcher", "Horror", "movie");
