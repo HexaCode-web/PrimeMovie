@@ -32,6 +32,7 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
+  await addMovie(921360, "Wire Room", "Action", "movie");
   await addMovie(
     338952,
     "Fantastic Beasts The Crimes of Grindelwald",
