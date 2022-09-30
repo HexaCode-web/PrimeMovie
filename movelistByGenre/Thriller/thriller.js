@@ -32,6 +32,7 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
+  await addMovie(893228, "Section 8 ", "Thriller", "movie");
   await addMovie(1028955, "In isolation", "Thriller", "movie");
   await addMovie(986088, "Control", "Thriller", "movie");
   await addMovie(844380, "Nix", "Thriller", "movie");

@@ -226,6 +226,8 @@ async function handleSubmit(event) {
 }
 form.addEventListener("submit", handleSubmit);
 async function Main() {
+  await addMovie(893228, "Section 8", "Action", "movie");
+  await addMovie(978651, "The Razing", "Horror", "movie");
   await addMovie(1028955, "In isolation", "Horror", "movie");
   await addMovie(986088, "Control", "Thriller", "movie");
   await addMovie(921360, "Wire Room", "Action", "movie");
