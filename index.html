@@ -19,6 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300;1,400&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital@1&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap"
       rel="stylesheet"
@@ -37,7 +38,7 @@
           <div class="Poster moviepic"></div>
           <div>
             <img class="Star" />
-            <span id="rating"></span>
+            <span class="rating"></span>
           </div>
           <div id="link"></div>
           <span class="genre"></span>
@@ -53,7 +54,8 @@
           <li><button id="signUpBTN">Register</button></li>
           <li> <h2> • </h2></li>
           <li><button id="signinBTN">Sign In</button></li>
-          <li><button id="logoutBTN" style="display: none">logout •</button></li>
+          <li><button id="logoutBTN" style="display: none">logout</button></li>
+          <li> <h2> • </h2></li>
           <li><button id="Profile" style="display: none"><a href="profile.html">Profile</a></button></li>
         </ul>
       </div>
@@ -186,45 +188,31 @@
             <div class="container">
               <h1 class="headline stroke"></h1>
               <p class="overview stroke"></p>
+              <p class="Details"><span id="type"></span>|<span id="Date"></span>|<span id="Rate"class="rating"><img class="Star"/> </span></p>
             </div>
           </div>
           <div class="carousel-item itemtwo">
             <div class="container">
               <h1 class="headline stroke"><a href="#"></a></h1>
               <p class="overview stroke"></p>
+              <p class="Details"><span id="type"></span>|<span id="Date"></span>|<span id="Rate"class="rating"><img class="Star"/> </span></p>
             </div>
           </div>
           <div class="carousel-item itemthree">
             <div class="container">
               <h1 class="headline stroke"><a href="#"></a></h1>
               <p class="overview stroke"></p>
+              <p class="Details"><span id="type"></span>|<span id="Date"></span>|<span id="Rate"class="rating"><img class="Star"/> </span></p>
             </div>
           </div>
           <div class="carousel-item itemfour">
             <div class="container">
               <h1 class="headline stroke"><a href="#"></a></h1>
               <p class="overview stroke"></p>
+              <p class="Details"><span id="type"></span>|<span id="Date"></span>|<span id="Rate"class="rating"><img class="Star"/> </span></p>
             </div>
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
       <div class="Search">
         <label for="SearchBar">Search for your Movie</label>

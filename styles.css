@@ -369,7 +369,7 @@ button:focus {
         WhatsNew (used by main page only)
 ================================================== */
 #myCarousel {
-  width: 90%;
+  width: 100%;
 }
 #header {
   text-align: center;
@@ -381,19 +381,24 @@ button:focus {
 #myCarousel .carousel-item {
   border-radius: 20px;
   width: 100%;
-  height: 350px;
+  height: 600px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
 #myCarousel .container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   text-align: center;
   position: absolute;
+  margin-left: 100px;
   bottom: 0;
-  left: 0;
-  right: 0;
   padding-bottom: 20px;
+}
+#myCarousel .Details {
+  color: goldenrod;
 }
 .stroke {
   color: white;
@@ -409,6 +414,9 @@ button:focus {
 }
 .carousel-item a:hover {
   color: goldenrod;
+}
+.headline {
+  font-family: "Libre Franklin", sans-serif;
 }
 /* ====================================================  
         Search
@@ -512,10 +520,12 @@ button:focus {
   box-shadow: 0 0 140px 5px goldenrod;
   transition-timing-function: ease-out;
 }
-.movies .movieCard .Star {
+.Star {
   /* rating star */
   content: url(images/star.png);
-  width: 10px;
+  color: cyan;
+  width: 15px;
+  margin-bottom: 2px;
 }
 .movies a {
   margin-bottom: 0px;
@@ -579,7 +589,7 @@ button:focus {
   .movieCard a,
   .movieCard .genre,
   .movieCard #releaseDate,
-  .movieCard #rating {
+  .movieCard .rating {
     font-size: 16px;
   }
   .Search {
@@ -632,7 +642,7 @@ button:focus {
   .movieCard a,
   .movieCard .genre,
   .movieCard #releaseDate,
-  .movieCard #rating {
+  .movieCard .rating {
     font-size: 16px;
   }
   .Search {

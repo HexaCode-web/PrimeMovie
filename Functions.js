@@ -139,16 +139,33 @@ const AddMovieRecent = (
   path = movieDB[movieNum].Name,
   color = "white"
 ) => {
-  varible.style.backgroundImage = `url(${movieDB[movieNum].backdrop_path})`;
-  let varHeadLine = varible
+  varible.style.backgroundImage = `linear-gradient(rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 100%),url(${movieDB[movieNum].backdrop_path})`;
+  const varHeadLine = varible
     .querySelector(".container")
     .querySelector(".headline");
-  let VarOverView = varible
+  const VarOverView = varible
     .querySelector(".container")
     .querySelector(".overview");
+  const varGenre = varible
+    .querySelector(".container")
+    .querySelector(".Details")
+    .querySelector("#type");
+  const vardate = varible
+    .querySelector(".container")
+    .querySelector(".Details")
+    .querySelector("#Date");
+  const varRate = varible
+    .querySelector(".container")
+    .querySelector(".Details")
+    .querySelector("#Rate");
   VarOverView.style.color = color;
   varHeadLine.innerHTML = `<a href="movieList/${path}/${path}.html">${path}</a>`;
   VarOverView.innerHTML = movieDB[movieNum].overview;
+  varGenre.innerHTML = movieDB[movieNum].Genre;
+  vardate.innerHTML = movieDB[movieNum].Date;
+  varRate.innerHTML += movieDB[movieNum].Rating.toFixed(1);
+  // console.log(movieDB[movieNum]);
+  // console.log(varGenre);
 };
 const UpdateUI = (
   Poster,
@@ -165,7 +182,7 @@ const UpdateUI = (
   const copyTemp = document.importNode(temp, true);
   copyTemp.querySelector(".Poster").innerHTML = `<img
   src = ${Poster}>`;
-  copyTemp.querySelector("#rating").innerHTML = `${Rating.toFixed(1)}`;
+  copyTemp.querySelector(".rating").innerHTML = `${Rating.toFixed(1)}`;
   copyTemp.querySelector("#link").innerHTML = `
   <a href="movielist/${Path}/${Path}.html">${Name}</a>`;
   copyTemp.querySelector(".genre").innerHTML = `
