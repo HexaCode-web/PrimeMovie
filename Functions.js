@@ -184,12 +184,12 @@ const UpdateUI = (
   src = ${Poster}>`;
   copyTemp.querySelector(".rating").innerHTML = `${Rating.toFixed(1)}`;
   copyTemp.querySelector("#link").innerHTML = `
-  <a href="movielist/${Path}/${Path}.html">${Name}</a>`;
+  <a href="movielist/${Path}/index.html">${Name}</a>`;
   copyTemp.querySelector(".genre").innerHTML = `
     ${genre}`;
   copyTemp.querySelector("#releaseDate").innerHTML = release_date;
   copyTemp.querySelector("#Watch").innerHTML = `
-    <a href="movielist/${Path}/${Path}.html">Watch Now</a>`;
+    <a href="movielist/${Path}/index.html">Watch Now</a>`;
   movieList.appendChild(copyTemp);
   movieInfo = {};
   movieInfo.Name = Name;
