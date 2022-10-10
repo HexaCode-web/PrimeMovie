@@ -32,12 +32,13 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
-  await addMovie(629542, "The Bad Guys", "Animations", "movie");
+  await addMovie(886083, "Deadstream", "Comedy", "movie");
+  await addMovie(629542, "The Bad Guys", "Comedy", "movie");
   await addMovie(550988, "Free Guy", "Comedy", "movie");
   await addMovie(1006851, "Office Invasion", "Comedy", "movie");
   await addShow(59186, "Impractical Jokers", "Comedy", "tv");
   await addMovie(656663, "Jackass Forever", "Comedy", "movie");
-  await addMovie(508947, "Turning Red", "animation", "movie");
+  await addMovie(508947, "Turning Red", "Comedy", "movie");
   await addMovie(913814, "Brian and Charles", "Comedy", "movie");
 }
 Main();
