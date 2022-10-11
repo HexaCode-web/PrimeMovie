@@ -32,6 +32,8 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
+  await addMovie(881487, "The Visitor", "Horror", "movie");
+  await addMovie(894205, "Werewolf by Night", "Horror", "movie");
   await addMovie(886083, "Deadstream", "Horror", "movie");
   await addMovie(1024530, "Grimcutty", "Horror", "movie");
   await addMovie(978651, "The Razing", "Horror", "movie");

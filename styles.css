@@ -586,6 +586,9 @@ button:focus {
     width: 70px;
     gap: 7px;
   }
+  #myCarousel .container {
+    margin-left: 0px;
+  }
   .movieCard a,
   .movieCard .genre,
   .movieCard #releaseDate,
@@ -634,10 +637,12 @@ button:focus {
   .logo {
     width: 50px;
   }
-
   .GenreList {
     width: 70px;
     gap: 7px;
+  }
+  #myCarousel .container {
+    margin-left: 0px;
   }
   .movieCard a,
   .movieCard .genre,

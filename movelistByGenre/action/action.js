@@ -32,6 +32,8 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
+  await addMovie(1026377, "Sanctioning Evil", "Action", "movie");
+  await addMovie(894205, "Werewolf by Night", "Action", "movie");
   await addMovie(893228, "Section 8 ", "Action", "movie");
   await addMovie(921360, "Wire Room", "Action", "movie");
   await addMovie(

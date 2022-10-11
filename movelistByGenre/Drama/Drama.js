@@ -32,6 +32,7 @@ const UpdateUI = (
   return movieInfo;
 };
 async function Main() {
+  await addMovie(799546, "Luckiest Girl Alive", "Drama", "movie");
   await addShow(1396, "Breaking Bad", "Drama", "tv");
   await addMovie(24021, "The Twilight Saga Eclipse", "Advanture", "movie");
   await addMovie(505026, "Death on the Nile", "Drama", "movie");
