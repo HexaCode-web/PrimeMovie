@@ -164,8 +164,6 @@ const AddMovieRecent = (
   varGenre.innerHTML = movieDB[movieNum].Genre;
   vardate.innerHTML = movieDB[movieNum].Date;
   varRate.innerHTML += movieDB[movieNum].Rating.toFixed(1);
-  // console.log(movieDB[movieNum]);
-  // console.log(varGenre);
 };
 const UpdateUI = (
   Poster,
